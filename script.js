@@ -1,63 +1,70 @@
-   (() => {
-  "use strict";
-
-  // MODO ESCURO
-  const btnTema = document.getElementById("toggleTema");
-  btnTema.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-    btnTema.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
-  });
-
-  // BOAS VINDAS
-  const inputNome = document.getElementById("nomeUsuario");
-  const boasVindas = document.getElementById("boasVindas");
-  inputNome.addEventListener("input", (e) => {
-    boasVindas.textContent = e.target.value ? `Olá, ${e.target.value}! 🌱` : "";
-  });
-
-  // CARDS
-  document.querySelectorAll("[data-card]").forEach(card => {
-    card.addEventListener("click", () => card.classList.toggle("is-open"));
-  });
-
-  // ANTES E DEPOIS
-  const toggleBtns = document.querySelectorAll(".toggle-btn");
-  const compImg = document.getElementById("comparacaoImg");
-  const compTitulo = document.getElementById("comparacaoTitulo");
-
-  toggleBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const modo = btn.dataset.modo;
-      toggleBtns.forEach(b => b.classList.remove("is-active"));
-      btn.classList.add("is-active");
-      
-      compImg.src = modo === "antes" ? "img/antes.jpg" : "img/depois.jpg";
-      compTitulo.textContent = modo === "antes" ? "Agricultura Não Sustentável" : "Agricultura Sustentável";
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Modo Escuro
+    const btnTema = document.getElementById("toggleTema");
+    btnTema.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        btnTema.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
     });
-  });
 
-  // CALCULADORA
-  const form = document.getElementById("formCalc");
-  const resultado = document.getElementById("resultado");
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const area = parseFloat(document.getElementById("area").value);
-    const agua = parseInt(document.getElementById("agua").value);
-    const fert = parseInt(document.getElementById("fertilizantes").value);
-
-    const impacto = (area * 0.1) + (agua * 10) + (fert * 10);
-    
-    resultado.className = "resultado show " + (impacto < 30 ? "baixo" : impacto < 60 ? "medio" : "alto");
-    resultado.innerHTML = `<h3>Impacto: ${impacto.toFixed(0)} pontos</h3><p>Nível: ${impacto < 30 ? "Baixo" : impacto < 60 ? "Médio" : "Alto"}</p>`;
-  });
-
-  // OBSERVER PARA REVEAL
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add("visible");
+    // 2. Boas-vindas
+    const inputNome = document.getElementById("nomeUsuario");
+    const boasVindas = document.getElementById("boasVindas");
+    inputNome.addEventListener("input", (e) => {
+        boasVindas.textContent = e.target.value ? `Bem-vindo, ${e.target.value}! 🌱` : "";
     });
-  }, { threshold: 0.1 });
 
-  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-})();
+    // 3. Cards Expansíveis
+    document.querySelectorAll("[data-card]").forEach(card => {
+        card.addEventListener("click", () => card.classList.toggle("is-open"));
+    });
+
+    // 4. Antes vs Depois
+    const toggleBtns = document.querySelectorAll(".toggle-btn");
+    const compImg = document.getElementById("comparacaoImg");
+    const compTitulo = document.getElementById("comparacaoTitulo");
+    const compDesc = document.getElementById("comparacaoDesc");
+
+    toggleBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            toggleBtns.forEach(b => b.classList.remove("is-active"));
+            btn.classList.add("is-active");
+
+            if (btn.dataset.modo === "depois") {
+                compImg.src = "img/depois.jpg";
+                compTitulo.textContent = "Agricultura Sustentável";
+                compDesc.textContent = "Uso de tecnologias verdes, rotação de culturas e preservação de nascentes.";
+            } else {
+                compImg.src = "img/antes.jpg";
+                compTitulo.textContent = "Agricultura Convencional";
+                compDesc.textContent = "Uso intensivo de defensivos agrícolas e monocultura degradam o ecossistema.";
+            }
+        });
+    });
+
+    // 5. Calculadora
+    const form = document.getElementById("formCalc");
+    const res = document.getElementById("resultado");
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const area = document.getElementById("area").value;
+        const agua = document.getElementById("agua").value;
+        const fert = document.getElementById("fertilizantes").value;
+
+        const pontos = (area * 0.5) + (agua * 10) + (fert * 10);
+        let status = pontos > 50 ? "🔴 Alto Impacto Ambiental" : "🟢 Baixo Impacto Ambiental";
+        
+        res.innerHTML = `${status} <br> <small>Pontuação estimada: ${pontos.toFixed(1)}</small>`;
+    });
+
+    // 6. Animação Scroll (Reveal)
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll(".reveal").forEach(section => observer.observe(section));
+});
