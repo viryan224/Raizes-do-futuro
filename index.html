@@ -1,155 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Site educacional sobre sustentabilidade no agronegócio com calculadora de impacto ambiental." />
-  <title>Agro Forte, Futuro Sustentável | Agrinho</title>
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto Agrinho 2026 - Agro Forte, Futuro Sustentável">
+    <title>AgroForte | Sustentabilidade no Campo</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container header__inner">
-      <a href="#home" class="logo">🌾 AgroForte</a>
-      <nav class="nav" aria-label="Navegação principal">
-        <ul>
-          <li><a href="#home">Início</a></li>
-          <li><a href="#educacao">Educação</a></li>
-          <li><a href="#problema">Antes vs Depois</a></li>
-          <li><a href="#calculadora">Calculadora</a></li>
-          <li><a href="#solucoes">Soluções</a></li>
-        </ul>
-      </nav>
-      <button id="toggleTema" class="btn-tema" aria-label="Alternar modo escuro">🌙</button>
-    </div>
-  </header>
-
-  <main>
-    <section id="home" class="hero">
-      <div class="hero__overlay"></div>
-      <div class="container hero__content">
-        <h1 class="hero__title">Agro Forte, Futuro Sustentável</h1>
-        <p class="hero__subtitle">
-          Equilíbrio entre produção e meio ambiente: aprenda boas práticas
-          agrícolas e descubra o impacto ambiental da sua produção.
-        </p>
-        <div class="hero__form">
-          <label for="nomeUsuario" class="sr-only">Seu nome</label>
-          <input type="text" id="nomeUsuario" placeholder="Digite seu nome (opcional)" />
-          <a href="#educacao" class="btn btn--primary">Começar 🌱</a>
+    <header class="header">
+        <div class="container header__inner">
+            <a href="#home" class="logo">🌾 AgroForte</a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#educacao">Educação</a></li>
+                    <li><a href="#problema">Impacto</a></li>
+                    <li><a href="#calculadora">Calculadora</a></li>
+                </ul>
+            </nav>
+            <button id="toggleTema" class="btn-tema" aria-label="Alternar modo escuro">🌙</button>
         </div>
-        <p id="boasVindas" class="hero__welcome"></p>
-      </div>
-    </section>
+    </header>
 
-    <section id="educacao" class="section reveal">
-      <div class="container">
-        <h2 class="section__title">Aprenda Sobre Sustentabilidade</h2>
-        <p class="section__subtitle">Clique nos cards para explorar cada tema.</p>
-
-        <div class="cards">
-          <article class="card" data-card>
-            <div class="card__head">
-              <span class="card__icon">🌱</span>
-              <h3>Solo Sustentável</h3>
-              <span class="card__toggle">+</span>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero__overlay"></div>
+            <div class="container hero__content">
+                <h1 class="hero__title">Agro Forte, Futuro Sustentável</h1>
+                <p class="hero__subtitle">Descubra como equilibrar a produção agrícola com a preservação do meio ambiente.</p>
+                <div class="hero__form">
+                    <input type="text" id="nomeUsuario" placeholder="Digite seu nome (opcional)">
+                    <a href="#educacao" class="btn btn--primary">Começar Jornada 🌱</a>
+                </div>
+                <p id="boasVindas" class="hero__welcome"></p>
             </div>
-            <div class="card__body">
-              <p>O solo é a base de toda a produção agrícola. Práticas como rotação de culturas, plantio direto e adubação orgânica preservam nutrientes e evitam a erosão.</p>
+        </section>
+
+        <section id="educacao" class="section reveal">
+            <div class="container">
+                <h2 class="section__title">Pilares da Sustentabilidade</h2>
+                <div class="cards">
+                    <article class="card" data-card>
+                        <div class="card__head">
+                            <span class="card__icon">🌱</span>
+                            <h3>Solo Vivo</h3>
+                            <span class="card__toggle">+</span>
+                        </div>
+                        <div class="card__body">
+                            <p>A rotação de culturas e o plantio direto evitam a erosão e mantêm os nutrientes essenciais na terra sem excesso de químicos.</p>
+                        </div>
+                    </article>
+
+                    <article class="card" data-card>
+                        <div class="card__head">
+                            <span class="card__icon">💧</span>
+                            <h3>Água Preciosa</h3>
+                            <span class="card__toggle">+</span>
+                        </div>
+                        <div class="card__body">
+                            <p>A irrigação por gotejamento reduz o consumo em até 60%, entregando água diretamente na raiz da planta.</p>
+                        </div>
+                    </article>
+                </div>
             </div>
-          </article>
+        </section>
 
-          <article class="card" data-card>
-            <div class="card__head">
-              <span class="card__icon">💧</span>
-              <h3>Uso Consciente da Água</h3>
-              <span class="card__toggle">+</span>
+        <section id="problema" class="section section--alt reveal">
+            <div class="container">
+                <h2 class="section__title">Antes vs Depois</h2>
+                <div class="toggle-group">
+                    <button class="toggle-btn is-active" data-modo="antes">❌ Tradicional</button>
+                    <button class="toggle-btn" data-modo="depois">✅ Sustentável</button>
+                </div>
+                <div id="comparacao" class="comparacao comparacao--antes">
+                    <img id="comparacaoImg" src="img/antes.jpg" alt="Solo degradado">
+                    <div class="comparacao__texto">
+                        <h3 id="comparacaoTitulo">Agricultura Convencional</h3>
+                        <p id="comparacaoDesc">Uso intensivo de defensivos agrícolas e monocultura degradam o ecossistema.</p>
+                    </div>
+                </div>
             </div>
-            <div class="card__body">
-              <p>Sistemas de irrigação por gotejamento e captação de água da chuva reduzem o desperdício e garantem produtividade em tempos de seca.</p>
+        </section>
+
+        <section id="calculadora" class="section reveal">
+            <div class="container">
+                <h2 class="section__title">Calculadora de Impacto</h2>
+                <form id="formCalc" class="form">
+                    <div class="form__group">
+                        <label>Área (Hectares)</label>
+                        <input type="number" id="area" placeholder="Ex: 10" required>
+                    </div>
+                    <div class="form__group">
+                        <label>Uso de Água</label>
+                        <select id="agua">
+                            <option value="1">Baixo (Gotejamento)</option>
+                            <option value="2">Médio (Aspersão)</option>
+                            <option value="3">Alto (Inundação)</option>
+                        </select>
+                    </div>
+                    <div class="form__group">
+                        <label>Fertilizantes</label>
+                        <select id="fertilizantes">
+                            <option value="1">Orgânico</option>
+                            <option value="2">Misto</option>
+                            <option value="3">Químico Intensivo</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn--primary">Calcular</button>
+                </form>
+                <div id="resultado" class="resultado"></div>
             </div>
-          </article>
+        </section>
+    </main>
 
-          <article class="card" data-card>
-            <div class="card__head">
-              <span class="card__icon">🌍</span>
-              <h3>Redução de Impacto</h3>
-              <span class="card__toggle">+</span>
-            </div>
-            <div class="card__body">
-              <p>Preservar matas ciliares e investir em controle biológico de pragas são caminhos para uma agricultura que produz sem destruir.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+    <footer class="footer">
+        <p>&copy; 2026 AgroForte - Concurso Agrinho</p>
+    </footer>
 
-    <section id="problema" class="section section--alt reveal">
-      <div class="container">
-        <h2 class="section__title">Antes vs Depois</h2>
-        <p class="section__subtitle">Veja a diferença entre a agricultura predatória e a sustentável.</p>
-
-        <div class="toggle-group">
-          <button class="toggle-btn is-active" data-modo="antes">❌ Não Sustentável</button>
-          <button class="toggle-btn" data-modo="depois">✅ Sustentável</button>
-        </div>
-
-        <div id="comparacao" class="comparacao comparacao--antes">
-          <img id="comparacaoImg" src="img/antes.jpg" alt="Solo degradado" />
-          <div class="comparacao__texto">
-            <h3 id="comparacaoTitulo">Agricultura Não Sustentável</h3>
-            <p id="comparacaoDesc">Uso excessivo de agrotóxicos e desperdício de água levam à degradação ambiental.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="calculadora" class="section reveal">
-      <div class="container">
-        <h2 class="section__title">Calculadora de Impacto Ambiental</h2>
-        <form id="formCalc" class="form">
-          <div class="form__group">
-            <label for="area">Área plantada (hectares)</label>
-            <input type="number" id="area" min="1" step="0.1" placeholder="Ex: 50" required />
-          </div>
-          <div class="form__group">
-            <label for="agua">Consumo de água</label>
-            <select id="agua" required>
-              <option value="">Selecione...</option>
-              <option value="1">Baixo (Gotejamento)</option>
-              <option value="2">Médio (Aspersão)</option>
-              <option value="3">Alto (Inundação)</option>
-            </select>
-          </div>
-          <div class="form__group">
-            <label for="fertilizantes">Uso de químicos</label>
-            <select id="fertilizantes" required>
-              <option value="">Selecione...</option>
-              <option value="1">Baixo/Orgânico</option>
-              <option value="2">Médio</option>
-              <option value="3">Intensivo</option>
-            </select>
-          </div>
-          <button type="submit" class="btn btn--primary">Calcular Impacto</button>
-        </form>
-        <div id="resultado" class="resultado"></div>
-      </div>
-    </section>
-
-    <section id="final" class="final reveal">
-      <div class="container">
-        <h2>O futuro do campo está em nossas mãos 🌎</h2>
-        <button id="btnReiniciar" class="btn btn--secondary">🔄 Reiniciar Experiência</button>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 AgroForte — Projeto Agrinho 🌾</p>
-    </div>
-  </footer>
-
-  <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
