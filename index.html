@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- HEADER -->
   <header class="header">
     <div class="container header__inner">
       <a href="#home" class="logo">🌾 AgroForte</a>
@@ -26,7 +25,6 @@
   </header>
 
   <main>
-    <!-- HOME -->
     <section id="home" class="hero">
       <div class="hero__overlay"></div>
       <div class="container hero__content">
@@ -44,7 +42,6 @@
       </div>
     </section>
 
-    <!-- EDUCATIVA -->
     <section id="educacao" class="section reveal">
       <div class="container">
         <h2 class="section__title">Aprenda Sobre Sustentabilidade</h2>
@@ -58,13 +55,7 @@
               <span class="card__toggle">+</span>
             </div>
             <div class="card__body">
-              <p>
-                O solo é a base de toda a produção agrícola. Práticas como
-                rotação de culturas, plantio direto e adubação orgânica
-                preservam nutrientes, evitam a erosão e mantêm o solo vivo
-                por gerações. Um solo saudável produz mais com menos
-                insumos químicos.
-              </p>
+              <p>O solo é a base de toda a produção agrícola. Práticas como rotação de culturas, plantio direto e adubação orgânica preservam nutrientes e evitam a erosão.</p>
             </div>
           </article>
 
@@ -75,150 +66,79 @@
               <span class="card__toggle">+</span>
             </div>
             <div class="card__body">
-              <p>
-                A agricultura é responsável por cerca de 70% do consumo
-                mundial de água doce. Sistemas de irrigação por gotejamento,
-                captação de água da chuva e o monitoramento da umidade do
-                solo reduzem o desperdício e garantem produtividade mesmo em
-                períodos de estiagem.
-              </p>
+              <p>Sistemas de irrigação por gotejamento e captação de água da chuva reduzem o desperdício e garantem produtividade em tempos de seca.</p>
             </div>
           </article>
 
           <article class="card" data-card>
             <div class="card__head">
               <span class="card__icon">🌍</span>
-              <h3>Redução de Impacto Ambiental</h3>
+              <h3>Redução de Impacto</h3>
               <span class="card__toggle">+</span>
             </div>
             <div class="card__body">
-              <p>
-                Diminuir o uso de agrotóxicos, preservar matas ciliares,
-                investir em energias renováveis e adotar o controle
-                biológico de pragas são caminhos para uma agricultura que
-                produz alimentos sem destruir o planeta.
-              </p>
+              <p>Preservar matas ciliares e investir em controle biológico de pragas são caminhos para uma agricultura que produz sem destruir.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- PROBLEMA: ANTES vs DEPOIS -->
     <section id="problema" class="section section--alt reveal">
       <div class="container">
         <h2 class="section__title">Antes vs Depois</h2>
-        <p class="section__subtitle">
-          Veja a diferença entre a agricultura predatória e a sustentável.
-        </p>
+        <p class="section__subtitle">Veja a diferença entre a agricultura predatória e a sustentável.</p>
 
-        <div class="toggle-group" role="tablist">
-          <button class="toggle-btn is-active" data-modo="antes" role="tab">❌ Não Sustentável</button>
-          <button class="toggle-btn" data-modo="depois" role="tab">✅ Sustentável</button>
+        <div class="toggle-group">
+          <button class="toggle-btn is-active" data-modo="antes">❌ Não Sustentável</button>
+          <button class="toggle-btn" data-modo="depois">✅ Sustentável</button>
         </div>
 
         <div id="comparacao" class="comparacao comparacao--antes">
           <img id="comparacaoImg" src="img/antes.jpg" alt="Solo degradado" />
           <div class="comparacao__texto">
             <h3 id="comparacaoTitulo">Agricultura Não Sustentável</h3>
-            <p id="comparacaoDesc">
-              Uso excessivo de agrotóxicos, desmatamento, erosão do solo e
-              desperdício de água levam à degradação ambiental e à perda de
-              produtividade ao longo do tempo.
-            </p>
+            <p id="comparacaoDesc">Uso excessivo de agrotóxicos e desperdício de água levam à degradação ambiental.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CALCULADORA -->
     <section id="calculadora" class="section reveal">
       <div class="container">
         <h2 class="section__title">Calculadora de Impacto Ambiental</h2>
-        <p class="section__subtitle">
-          Descubra a pegada ecológica da sua produção agrícola.
-        </p>
-
-        <form id="formCalc" class="form" novalidate>
+        <form id="formCalc" class="form">
           <div class="form__group">
             <label for="area">Área plantada (hectares)</label>
-            <input type="number" id="area" name="area" min="1" step="0.1" placeholder="Ex: 50" required />
+            <input type="number" id="area" min="1" step="0.1" placeholder="Ex: 50" required />
           </div>
-
           <div class="form__group">
             <label for="agua">Consumo de água</label>
-            <select id="agua" name="agua" required>
+            <select id="agua" required>
               <option value="">Selecione...</option>
-              <option value="1">Baixo</option>
-              <option value="2">Médio</option>
-              <option value="3">Alto</option>
+              <option value="1">Baixo (Gotejamento)</option>
+              <option value="2">Médio (Aspersão)</option>
+              <option value="3">Alto (Inundação)</option>
             </select>
           </div>
-
           <div class="form__group">
-            <label for="fertilizantes">Uso de fertilizantes</label>
-            <select id="fertilizantes" name="fertilizantes" required>
+            <label for="fertilizantes">Uso de químicos</label>
+            <select id="fertilizantes" required>
               <option value="">Selecione...</option>
-              <option value="1">Baixo</option>
+              <option value="1">Baixo/Orgânico</option>
               <option value="2">Médio</option>
-              <option value="3">Alto</option>
+              <option value="3">Intensivo</option>
             </select>
           </div>
-
           <button type="submit" class="btn btn--primary">Calcular Impacto</button>
         </form>
-
-        <div id="resultado" class="resultado" aria-live="polite"></div>
+        <div id="resultado" class="resultado"></div>
       </div>
     </section>
 
-    <!-- SOLUÇÕES -->
-    <section id="solucoes" class="section section--alt reveal">
-      <div class="container">
-        <h2 class="section__title">Boas Práticas Sustentáveis</h2>
-        <ul class="solucoes">
-          <li class="solucao reveal">
-            <span class="solucao__icon">🔄</span>
-            <h3>Rotação de Culturas</h3>
-            <p>Alterna espécies plantadas para preservar nutrientes do solo e quebrar ciclos de pragas.</p>
-          </li>
-          <li class="solucao reveal">
-            <span class="solucao__icon">💦</span>
-            <h3>Irrigação Eficiente</h3>
-            <p>Sistemas de gotejamento e sensores reduzem o desperdício de água em até 60%.</p>
-          </li>
-          <li class="solucao reveal">
-            <span class="solucao__icon">🧪</span>
-            <h3>Redução de Químicos</h3>
-            <p>Controle biológico e adubação orgânica diminuem a contaminação do solo e da água.</p>
-          </li>
-          <li class="solucao reveal">
-            <span class="solucao__icon">🌳</span>
-            <h3>Preservação de Matas</h3>
-            <p>Manter matas ciliares e áreas de reserva protege a biodiversidade e os mananciais.</p>
-          </li>
-          <li class="solucao reveal">
-            <span class="solucao__icon">☀️</span>
-            <h3>Energias Renováveis</h3>
-            <p>Energia solar e eólica reduzem custos e emissões de gases de efeito estufa.</p>
-          </li>
-          <li class="solucao reveal">
-            <span class="solucao__icon">🐝</span>
-            <h3>Polinizadores</h3>
-            <p>Proteger abelhas e outros polinizadores aumenta a produtividade natural das lavouras.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- FINAL -->
     <section id="final" class="final reveal">
       <div class="container">
         <h2>O futuro do campo está em nossas mãos 🌎</h2>
-        <p>
-          Cada escolha sustentável fortalece a produção e protege o meio
-          ambiente. Compartilhe esse conhecimento e seja parte da mudança.
-        </p>
         <button id="btnReiniciar" class="btn btn--secondary">🔄 Reiniciar Experiência</button>
       </div>
     </section>
@@ -226,7 +146,7 @@
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 AgroForte — Projeto Agrinho 🌾 | Desenvolvido com HTML, CSS e JavaScript puros.</p>
+      <p>&copy; 2026 AgroForte — Projeto Agrinho 🌾</p>
     </div>
   </footer>
 
