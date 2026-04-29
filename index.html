@@ -5,275 +5,169 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Projeto Agrinho 2026 - Agro Forte, Futuro Sustentável">
     <title>AgroForte | Sustentabilidade no Campo</title>
-    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header class="header">
-        <div class="container header__inner">
-            <a href="#home" class="logo">🌾 AgroForte</a>
 
-            <nav class="nav">
-                <ul>
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#educacao">Educação</a></li>
-                    <li><a href="#problema">Impacto</a></li>
-                    <li><a href="#calculadora">Calculadora</a></li>
-                </ul>
-            </nav>
+<header class="header">
+    <div class="container header__inner">
 
-            <button id="toggleTema" class="btn-tema" aria-label="Alternar modo escuro">🌙</button>
+        <a href="#home" class="logo">🌾 AgroForte</a>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#educacao">Educação</a></li>
+                <li><a href="#problema">Impacto</a></li>
+                <li><a href="#calculadora">Calculadora</a></li>
+            </ul>
+        </nav>
+
+        <button id="toggleTema" class="btn-tema">🌙</button>
+
+    </div>
+</header>
+
+<main>
+
+<section id="home" class="hero">
+    <div class="hero__overlay"></div>
+
+    <div class="container hero__content">
+
+        <h1 class="hero__title">Agro Forte, Futuro Sustentável</h1>
+
+        <p class="hero__subtitle">
+            Descubra como equilibrar a produção agrícola com a preservação do meio ambiente.
+        </p>
+
+        <div class="hero__form">
+            <input type="text" id="nomeUsuario" placeholder="Digite seu nome (opcional)">
+            <a href="#educacao" class="btn btn--primary">Começar Jornada 🌱</a>
         </div>
-    </header>
 
-    <main>
+        <p id="boasVindas" class="hero__welcome"></p>
 
-        <section id="home" class="hero">
-            <div class="hero__overlay"></div>
+    </div>
+</section>
 
-            <div class="container hero__content">
-                <h1 class="hero__title">Agro Forte, Futuro Sustentável</h1>
+<section id="educacao" class="section reveal">
+    <div class="container">
 
-                <p class="hero__subtitle">
-                    Descubra como equilibrar a produção agrícola com a preservação do meio ambiente.
+        <h2 class="section__title">Pilares da Sustentabilidade</h2>
+
+        <div class="cards">
+
+            <article class="card" data-card>
+                <div class="card__head">
+                    <span class="card__icon">🌱</span>
+                    <h3>Solo Vivo</h3>
+                    <span class="card__toggle">+</span>
+                </div>
+
+                <div class="card__body">
+                    <p>
+                        A rotação de culturas e o plantio direto evitam a erosão e mantêm os nutrientes essenciais na terra sem excesso de químicos.
+                    </p>
+                </div>
+            </article>
+
+            <article class="card" data-card>
+                <div class="card__head">
+                    <span class="card__icon">💧</span>
+                    <h3>Água Preciosa</h3>
+                    <span class="card__toggle">+</span>
+                </div>
+
+                <div class="card__body">
+                    <p>
+                        A irrigação por gotejamento reduz o consumo em até 60%, entregando água diretamente na raiz da planta.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="problema" class="section section--alt reveal">
+    <div class="container">
+
+        <h2 class="section__title">Antes vs Depois</h2>
+
+        <div class="toggle-group">
+            <button class="toggle-btn is-active" data-modo="antes">❌ Tradicional</button>
+            <button class="toggle-btn" data-modo="depois">✅ Sustentável</button>
+        </div>
+
+        <div id="comparacao" class="comparacao comparacao--antes">
+
+            <img id="comparacaoImg" src="antes.jpg" alt="Solo degradado">
+
+            <div class="comparacao__texto">
+                <h3 id="comparacaoTitulo">Agricultura Convencional</h3>
+
+                <p id="comparacaoDesc">
+                    Uso intensivo de defensivos agrícolas e monocultura degradam o ecossistema.
                 </p>
-
-                <div class="hero__form">
-                    <input type="text" id="nomeUsuario" placeholder="Digite seu nome (opcional)">
-                    <a href="#educacao" class="btn btn--primary">Começar Jornada 🌱</a>
-                </div>
-
-                <p id="boasVindas" class="hero__welcome"></p>
             </div>
-        </section>
 
-        <section id="educacao" class="section reveal">
-            <div class="container">
-                <h2 class="section__title">Pilares da Sustentabilidade</h2>
+        </div>
 
-                <div class="cards">
+    </div>
+</section>
 
-                    <article class="card" data-card>
-                        <div class="card__head">
-                            <span class="card__icon">🌱</span>
-                            <h3>Solo Vivo</h3>
-                            <span class="card__toggle">+</span>
-                        </div>
+<section id="calculadora" class="section reveal">
+    <div class="container">
 
-                        <div class="card__body">
-                            <p>
-                                A rotação de culturas e o plantio direto evitam a erosão e mantêm
-                                os nutrientes essenciais na terra sem excesso de químicos.
-                            </p>
-                        </div>
-                    </article>
+        <h2 class="section__title">Calculadora de Impacto</h2>
 
-                    <article class="card" data-card>
-                        <div class="card__head">
-                            <span class="card__icon">💧</span>
-                            <h3>Água Preciosa</h3>
-                            <span class="card__toggle">+</span>
-                        </div>
+        <form id="formCalc" class="form">
 
-                        <div class="card__body">
-                            <p>
-                                A irrigação por gotejamento reduz o consumo em até 60%,
-                                entregando água diretamente na raiz da planta.
-                            </p>
-                        </div>
-                    </article>
-
-                </div>
+            <div class="form__group">
+                <label>Área (Hectares)</label>
+                <input type="number" id="area" placeholder="Ex: 10" required>
             </div>
-        </section>
 
-        <section id="problema" class="section section--alt reveal">
-            <div class="container">
+            <div class="form__group">
+                <label>Uso de Água</label>
 
-                <h2 class="section__title">Antes vs Depois</h2>
-
-                <div class="toggle-group">
-                    <button class="toggle-btn is-active" data-modo="antes">❌ Tradicional</button>
-                    <button class="toggle-btn" data-modo="depois">✅ Sustentável</button>
-                </div>
-
-                <div id="comparacao" class="comparacao comparacao--antes">
-
-                    <img id="comparacaoImg" src="./img/antes.jpg" alt="Solo degradado">
-
-                    <div class="comparacao__texto">
-                        <h3 id="comparacaoTitulo">Agricultura Convencional</h3>
-
-                        <p id="comparacaoDesc">
-                            Uso intensivo de defensivos agrícolas e monocultura degradam o ecossistema.
-                        </p>
-                    </div>
-
-                </div>
+                <select id="agua">
+                    <option value="1">Baixo (Gotejamento)</option>
+                    <option value="2">Médio (Aspersão)</option>
+                    <option value="3">Alto (Inundação)</option>
+                </select>
             </div>
-        </section>
 
-        <section id="calculadora" class="section reveal">
-            <div class="container">
+            <div class="form__group">
+                <label>Fertilizantes</label>
 
-                <h2 class="section__title">Calculadora de Impacto</h2>
-
-                <form id="formCalc" class="form">
-
-                    <div class="form__group">
-                        <label>Área (Hectares)</label>
-                        <input type="number" id="area" placeholder="Ex: 10" required>
-                    </div>
-
-                    <div class="form__group">
-                        <label>Uso de Água</label>
-
-                        <select id="agua">
-                            <option value="1">Baixo (Gotejamento)</option>
-                            <option value="2">Médio (Aspersão)</option>
-                            <option value="3">Alto (Inundação)</option>
-                        </select>
-                    </div>
-
-                    <div class="form__group">
-                        <label>Fertilizantes</label>
-
-                        <select id="fertilizantes">
-                            <option value="1">Orgânico</option>
-                            <option value="2">Misto</option>
-                            <option value="3">Químico Intensivo</option>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="btn btn--primary">Calcular</button>
-
-                </form>
-
-                <div id="resultado" class="resultado"></div>
-
+                <select id="fertilizantes">
+                    <option value="1">Orgânico</option>
+                    <option value="2">Misto</option>
+                    <option value="3">Químico Intensivo</option>
+                </select>
             </div>
-        </section>
 
-    </main>
+            <button type="submit" class="btn btn--primary">Calcular</button>
 
-    <footer class="footer">
-        <p>&copy; 2026 AgroForte - Concurso Agrinho</p>
-    </footer>
+        </form>
 
-    <script src="./js/script.js"></script>
-</body>
-    </html>                        </div>
-                    </article>
+        <div id="resultado" class="resultado"></div>
 
-                    <article class="card" data-card>
-                        <div class="card__head">
-                            <span class="card__icon">💧</span>
-                            <h3>Água Preciosa</h3>
-                            <span class="card__toggle">+</span>
-                        </div>
+    </div>
+</section>
 
-                        <div class="card__body">
-                            <p>
-                                A irrigação por gotejamento reduz o consumo em até 60%,
-                                entregando água diretamente na raiz da planta.
-                            </p>
-                        </div>
-                    </article>
+</main>
 
-                </div>
-            </div>
-        </section>
+<footer class="footer">
+    <p>&copy; 2026 AgroForte - Concurso Agrinho</p>
+</footer>
 
-        <section id="problema" class="section section--alt reveal">
-            <div class="container">
+<script src="script.js"></script>
 
-                <h2 class="section__title">Antes vs Depois</h2>
-
-                <div class="toggle-group">
-                    <button class="toggle-btn is-active" data-modo="antes">❌ Tradicional</button>
-                    <button class="toggle-btn" data-modo="depois">✅ Sustentável</button>
-                </div>
-
-                <div id="comparacao" class="comparacao comparacao--antes">
-
-                    <img id="comparacaoImg" src="./img/antes.jpg" alt="Solo degradado">
-
-                    <div class="comparacao__texto">
-                        <h3 id="comparacaoTitulo">Agricultura Convencional</h3>
-
-                        <p id="comparacaoDesc">
-                            Uso intensivo de defensivos agrícolas e monocultura degradam o ecossistema.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section id="calculadora" class="section reveal">
-            <div class="container">
-
-                <h2 class="section__title">Calculadora de Impacto</h2>
-
-                <form id="formCalc" class="form">
-
-                    <div class="form__group">
-                        <label>Área (Hectares)</label>
-                        <input type="number" id="area" placeholder="Ex: 10" required>
-                    </div>
-
-                    <div class="form__group">
-                        <label>Uso de Água</label>
-
-                        <select id="agua">
-                            <option value="1">Baixo (Gotejamento)</option>
-                            <option value="2">Médio (Aspersão)</option>
-                            <option value="3">Alto (Inundação)</option>
-                        </select>
-                    </div>
-
-                    <div class="form__group">
-                        <label>Fertilizantes</label>
-
-                        <select id="fertilizantes">
-                            <option value="1">Orgânico</option>
-                            <option value="2">Misto</option>
-                            <option value="3">Químico Intensivo</option>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="btn btn--primary">Calcular</button>
-
-                </form>
-
-                <div id="resultado" class="resultado"></div>
-
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="footer">
-        <p>&copy; 2026 AgroForte - Concurso Agrinho</p>
-    </footer>
-
-    <script src="./js/script.js"></script>
-</body>
-    </html>                            <option value="1">Orgânico</option>
-                            <option value="2">Misto</option>
-                            <option value="3">Químico Intensivo</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn--primary">Calcular</button>
-                </form>
-                <div id="resultado" class="resultado"></div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <p>&copy; 2026 AgroForte - Concurso Agrinho</p>
-    </footer>
-
-    <script src="js/script.js"></script>
 </body>
 </html>
