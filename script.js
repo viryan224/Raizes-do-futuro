@@ -1,168 +1,127 @@
-/**
- * PROJETO AGROFORTE - AGRINHO 2026
- * Script corrigido + melhorias
- */
+const nomeUsuario = document.getElementById("nomeUsuario");
+const boasVindas = document.getElementById("boasVindas");
+const tema = document.getElementById("toggleTema");
+const body = document.body;
 
-/* =========================
-   ELEMENTOS
-========================= */
-const formCalculadora = document.getElementById("formCalc");
-const campoNomeUsuario = document.getElementById("nomeUsuario");
-const areaResultado = document.getElementById("resultado");
-const btnTema = document.getElementById("toggleTema");
+/* BOAS VINDAS */
+nomeUsuario.addEventListener("input", () => {
+  const nome = nomeUsuario.value.trim();
 
-const imagemComparacao = document.getElementById("comparacaoImg");
-const tituloComparacao = document.getElementById("comparacaoTitulo");
-const descComparacao = document.getElementById("comparacaoDesc");
-const botoesModo = document.querySelectorAll(".toggle-btn");
-
-/* =========================
-   BOAS-VINDAS
-========================= */
-campoNomeUsuario.addEventListener("input", () => {
-    const boasVindas = document.getElementById("boasVindas");
-    const nome = campoNomeUsuario.value.trim();
-
-    boasVindas.textContent = nome
-        ? `Olá, ${nome}! Vamos aprender sobre sua terra?`
-        : "";
+  if(nome !== ""){
+    boasVindas.innerText = `Olá, ${nome}! Vamos construir um futuro sustentável 🌱`;
+  }else{
+    boasVindas.innerText = "";
+  }
 });
 
-/* =========================
-   TROCA ANTES / DEPOIS
-========================= */
-botoesModo.forEach((botao) => {
-    botao.addEventListener("click", () => {
+/* IR PARA EDUCAÇÃO */
+function irEducacao(){
+  document.getElementById("educacao").scrollIntoView({
+    behavior:"smooth"
+  });
+}
 
-        botoesModo.forEach(btn => btn.classList.remove("is-active"));
-        botao.classList.add("is-active");
+/* TEMA */
+tema.addEventListener("click", () => {
+  body.classList.toggle("dark");
 
-        const modo = botao.dataset.modo;
-
-        if (modo === "antes") {
-            imagemComparacao.src = "antes.jpg";
-            tituloComparacao.textContent = "Agricultura Convencional";
-            descComparacao.textContent =
-                "Uso intensivo de defensivos agrícolas e monocultura degradam o ecossistema.";
-        } else {
-            imagemComparacao.src = "depois.jpg";
-            tituloComparacao.textContent = "Agricultura Sustentável";
-            descComparacao.textContent =
-                "Rotação de culturas, irrigação eficiente e solo protegido aumentam a produtividade.";
-        }
-    });
+  if(body.classList.contains("dark")){
+    tema.innerText = "☀️";
+  }else{
+    tema.innerText = "🌙";
+  }
 });
 
-/* =========================
-   CALCULADORA
-========================= */
-formCalculadora.addEventListener("submit", (event) => {
-    event.preventDefault();
+/* ANTES */
+function mostrarAntes(){
+  document.getElementById("imgSolo").src = "antes.jpg";
+  document.getElementById("tituloSolo").innerText = "Solo Degradado";
+  document.getElementById("descSolo").innerText =
+  "Uso excessivo de químicos, erosão e monocultura reduzem a fertilidade da terra.";
+}
 
-    const hectares = parseFloat(document.getElementById("area").value);
-    const sistemaAgua = document.getElementById("agua").value;
-    const tipoFertilizante = document.getElementById("fertilizantes").value;
+/* DEPOIS */
+function mostrarDepois(){
+  document.getElementById("imgSolo").src = "depois.jpg";
+  document.getElementById("tituloSolo").innerText = "Solo Fértil e Sustentável";
+  document.getElementById("descSolo").innerText =
+  "Rotação de culturas, irrigação correta e proteção vegetal aumentam a produtividade.";
+}
 
-    let score = 0;
-    let titulo = "";
-    let dica = "";
-    let recomendacoes = "";
+/* CALCULADORA */
+document.getElementById("formCalc").addEventListener("submit", function(e){
+  e.preventDefault();
 
-    if (sistemaAgua === "1") score += 50;
-    if (tipoFertilizante === "1") score += 50;
+  const area = document.getElementById("area").value;
+  const agua = document.getElementById("agua").value;
+  const fert = document.getElementById("fertilizante").value;
+  const resultado = document.getElementById("resultado");
 
-    if (score === 100) {
-        titulo = "Excelente Resultado 🌱";
-        dica =
-            "Sua propriedade segue práticas modernas e sustentáveis.";
-        recomendacoes =
-            "• Continue usando irrigação inteligente.<br>• Invista em cobertura vegetal.<br>• Faça análise periódica do solo.";
-    }
+  let pontos = 0;
 
-    else if (score >= 50) {
-        titulo = "Bom Caminho 👍";
-        dica =
-            "Você já possui boas práticas, mas ainda pode melhorar.";
-        recomendacoes =
-            "• Adote gotejamento.<br>• Reduza fertilizantes químicos.<br>• Faça rotação de culturas.";
-    }
+  if(agua == "1") pontos += 50;
+  if(fert == "1") pontos += 50;
 
-    else {
-        titulo = "Atenção ⚠️";
-        dica =
-            "Seu sistema pode causar desgaste ambiental ao longo do tempo.";
-        recomendacoes =
-            "• Economize água.<br>• Utilize compostagem.<br>• Proteja o solo contra erosão.";
-    }
+  let titulo = "";
+  let texto = "";
+  let dicas = "";
 
-    exibirResultado(hectares, score, titulo, dica, recomendacoes);
-});
-
-/* =========================
-   EXIBIR RESULTADO
-========================= */
-function exibirResultado(area, score, titulo, dica, recomendacoes) {
-
-    areaResultado.innerHTML = `
-        <div class="resultado-card">
-            <h3>${titulo}</h3>
-
-            <p><strong>Área analisada:</strong> ${area} hectares</p>
-
-            <p><strong>Índice de Sustentabilidade:</strong> ${score}%</p>
-
-            <p class="feedback-texto">${dica}</p>
-
-            <div class="dicas-box">
-                <h4>Como melhorar sua agricultura:</h4>
-                <button class="btn btn--primary" onclick="toggleDicas()">
-                    Saber Mais
-                </button>
-
-                <div id="maisDicas" style="display:none; margin-top:15px;">
-                    ${recomendacoes}
-                </div>
-            </div>
-
-            <br>
-
-            <button onclick="reiniciarSimulador()" class="btn">
-                Novo Cálculo
-            </button>
-        </div>
+  if(pontos == 100){
+    titulo = "Excelente 🌱";
+    texto = "Sua propriedade demonstra ótimo equilíbrio ambiental.";
+    dicas = `
+      • Continue investindo em irrigação inteligente.<br>
+      • Faça análise periódica do solo.<br>
+      • Amplie uso de energia renovável.
     `;
+  }
 
-    areaResultado.scrollIntoView({ behavior: "smooth" });
-}
+  else if(pontos >= 50){
+    titulo = "Bom Caminho 👍";
+    texto = "Você já aplica práticas positivas, mas ainda pode evoluir.";
+    dicas = `
+      • Reduza químicos agressivos.<br>
+      • Teste compostagem orgânica.<br>
+      • Implante rotação de culturas.
+    `;
+  }
 
-/* =========================
-   ABRIR DICAS
-========================= */
-function toggleDicas() {
-    const box = document.getElementById("maisDicas");
+  else{
+    titulo = "Atenção ⚠️";
+    texto = "Seu modelo atual pode causar impacto ambiental futuro.";
+    dicas = `
+      • Economize água.<br>
+      • Use fertilizantes orgânicos.<br>
+      • Proteja o solo contra erosão.
+    `;
+  }
 
-    if (box.style.display === "none") {
-        box.style.display = "block";
-    } else {
-        box.style.display = "none";
-    }
-}
+  resultado.innerHTML = `
+    <div class="resultado-box">
+      <h3>${titulo}</h3>
+      <p><strong>Área:</strong> ${area} hectares</p>
+      <p><strong>Índice Sustentável:</strong> ${pontos}%</p>
+      <p>${texto}</p>
 
-/* =========================
-   REINICIAR
-========================= */
-function reiniciarSimulador() {
-    formCalculadora.reset();
-    areaResultado.innerHTML = "";
-    window.location.hash = "calculadora";
-}
+      <br>
 
-/* =========================
-   TEMA
-========================= */
-btnTema.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
+      <button class="btn" onclick="abrirDicas()">Saber Mais</button>
 
-    btnTema.textContent =
-        document.body.classList.contains("dark") ? "☀️" : "🌙";
+      <div id="maisInfo" class="extra">
+        <h4>Como melhorar:</h4>
+        <p>${dicas}</p>
+      </div>
+    </div>
+  `;
 });
+
+/* ABRIR DICAS */
+function abrirDicas(){
+  const box = document.getElementById("maisInfo");
+
+  if(box.style.display === "block"){
+    box.style.display = "none";
+  }else{
+    box.style.display = "block";
+  }
+}
