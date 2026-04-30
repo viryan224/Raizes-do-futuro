@@ -157,3 +157,23 @@ function abrirDicas(){
     box.style.display = "block";
   }
 }
+
+/* BOTÃO VOLTAR TOPO */
+window.addEventListener("scroll", function(){
+
+  const botao = document.getElementById("btnTopo");
+
+  if(window.scrollY > 400){
+    botao.style.display = "block";
+  }else{
+    botao.style.display = "none";
+  }
+
+});
+
+function topoSite(){
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+}
