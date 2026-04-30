@@ -1,70 +1,168 @@
 /**
  * PROJETO AGROFORTE - AGRINHO 2026
- * Objetivo: Calcular impacto ambiental e educar sobre práticas sustentáveis.
+ * Script corrigido + melhorias
  */
 
-// 1. Seleção de Elementos (Nomenclatura clara conforme Nível 4)
-const formCalculadora = document.getElementById('formCalc');
-const campoNomeUsuario = document.getElementById('nomeUsuario');
-const areaResultado = document.getElementById('resultado');
-const btnTema = document.getElementById('toggleTema');
+/* =========================
+   ELEMENTOS
+========================= */
+const formCalculadora = document.getElementById("formCalc");
+const campoNomeUsuario = document.getElementById("nomeUsuario");
+const areaResultado = document.getElementById("resultado");
+const btnTema = document.getElementById("toggleTema");
 
-// 2. Personalização de Boas-Vindas
-campoNomeUsuario.addEventListener('input', () => {
-    const boasVindas = document.getElementById('boasVindas');
-    const nome = campoNomeUsuario.value;
-    boasVindas.textContent = nome ? `Olá, ${nome}! Vamos aprender sobre sua terra?` : '';
+const imagemComparacao = document.getElementById("comparacaoImg");
+const tituloComparacao = document.getElementById("comparacaoTitulo");
+const descComparacao = document.getElementById("comparacaoDesc");
+const botoesModo = document.querySelectorAll(".toggle-btn");
+
+/* =========================
+   BOAS-VINDAS
+========================= */
+campoNomeUsuario.addEventListener("input", () => {
+    const boasVindas = document.getElementById("boasVindas");
+    const nome = campoNomeUsuario.value.trim();
+
+    boasVindas.textContent = nome
+        ? `Olá, ${nome}! Vamos aprender sobre sua terra?`
+        : "";
 });
 
-// 3. Lógica da Calculadora de Impacto (Interatividade Pedagógica)
-formCalculadora.addEventListener('submit', (event) => {
-    event.preventDefault(); // Evita recarregar a página
+/* =========================
+   TROCA ANTES / DEPOIS
+========================= */
+botoesModo.forEach((botao) => {
+    botao.addEventListener("click", () => {
 
-    const hectares = parseFloat(document.getElementById('area').value);
-    const sistemaAgua = document.getElementById('agua').value;
-    const tipoFertilizante = document.getElementById('fertilizantes').value;
+        botoesModo.forEach(btn => btn.classList.remove("is-active"));
+        botao.classList.add("is-active");
 
-    let scoreSustentavel = 0;
-    let mensagemDica = "";
+        const modo = botao.dataset.modo;
 
-    // Lógica de avaliação (Algoritmo e Estrutura)
-    if (sistemaAgua === "1") scoreSustentavel += 50; // Gotejamento
-    if (tipoFertilizante === "1") scoreSustentavel += 50; // Orgânico
+        if (modo === "antes") {
+            imagemComparacao.src = "antes.jpg";
+            tituloComparacao.textContent = "Agricultura Convencional";
+            descComparacao.textContent =
+                "Uso intensivo de defensivos agrícolas e monocultura degradam o ecossistema.";
+        } else {
+            imagemComparacao.src = "depois.jpg";
+            tituloComparacao.textContent = "Agricultura Sustentável";
+            descComparacao.textContent =
+                "Rotação de culturas, irrigação eficiente e solo protegido aumentam a produtividade.";
+        }
+    });
+});
 
-    // Construção do feedback educativo (Requisito de Usabilidade Nível 4)
-    if (scoreSustentavel === 100) {
-        mensagemDica = "Excelente! Sua propriedade segue os mais altos padrões de equilíbrio ambiental.";
-    } else if (scoreSustentavel >= 50) {
-        mensagemDica = "Bom caminho! Tente adotar sistemas de irrigação por gotejamento para economizar até 60% de água.";
-    } else {
-        mensagemDica = "Alerta: O uso de técnicas convencionais pode degradar o solo a longo prazo. Considere o Manejo Integrado!";
+/* =========================
+   CALCULADORA
+========================= */
+formCalculadora.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const hectares = parseFloat(document.getElementById("area").value);
+    const sistemaAgua = document.getElementById("agua").value;
+    const tipoFertilizante = document.getElementById("fertilizantes").value;
+
+    let score = 0;
+    let titulo = "";
+    let dica = "";
+    let recomendacoes = "";
+
+    if (sistemaAgua === "1") score += 50;
+    if (tipoFertilizante === "1") score += 50;
+
+    if (score === 100) {
+        titulo = "Excelente Resultado 🌱";
+        dica =
+            "Sua propriedade segue práticas modernas e sustentáveis.";
+        recomendacoes =
+            "• Continue usando irrigação inteligente.<br>• Invista em cobertura vegetal.<br>• Faça análise periódica do solo.";
     }
 
-    exibirResultado(hectares, scoreSustentavel, mensagemDica);
+    else if (score >= 50) {
+        titulo = "Bom Caminho 👍";
+        dica =
+            "Você já possui boas práticas, mas ainda pode melhorar.";
+        recomendacoes =
+            "• Adote gotejamento.<br>• Reduza fertilizantes químicos.<br>• Faça rotação de culturas.";
+    }
+
+    else {
+        titulo = "Atenção ⚠️";
+        dica =
+            "Seu sistema pode causar desgaste ambiental ao longo do tempo.";
+        recomendacoes =
+            "• Economize água.<br>• Utilize compostagem.<br>• Proteja o solo contra erosão.";
+    }
+
+    exibirResultado(hectares, score, titulo, dica, recomendacoes);
 });
 
-// 4. Função de Exibição (Organização e Sequência Lógica)
-function exibirResultado(area, score, dica) {
+/* =========================
+   EXIBIR RESULTADO
+========================= */
+function exibirResultado(area, score, titulo, dica, recomendacoes) {
+
     areaResultado.innerHTML = `
         <div class="resultado-card">
-            <h3>Análise da Área de ${area} Hectares</h3>
-            <p>Índice de Sustentabilidade: <strong>${score}%</strong></p>
+            <h3>${titulo}</h3>
+
+            <p><strong>Área analisada:</strong> ${area} hectares</p>
+
+            <p><strong>Índice de Sustentabilidade:</strong> ${score}%</p>
+
             <p class="feedback-texto">${dica}</p>
-            <button onclick="reiniciarSimulador()" class="btn btn--secondary">Novo Cálculo</button>
+
+            <div class="dicas-box">
+                <h4>Como melhorar sua agricultura:</h4>
+                <button class="btn btn--primary" onclick="toggleDicas()">
+                    Saber Mais
+                </button>
+
+                <div id="maisDicas" style="display:none; margin-top:15px;">
+                    ${recomendacoes}
+                </div>
+            </div>
+
+            <br>
+
+            <button onclick="reiniciarSimulador()" class="btn">
+                Novo Cálculo
+            </button>
         </div>
     `;
-    areaResultado.scrollIntoView({ behavior: 'smooth' });
+
+    areaResultado.scrollIntoView({ behavior: "smooth" });
 }
 
-// 5. Funcionalidade Extra: Botão de Reiniciar (Requisito Nível 4)
+/* =========================
+   ABRIR DICAS
+========================= */
+function toggleDicas() {
+    const box = document.getElementById("maisDicas");
+
+    if (box.style.display === "none") {
+        box.style.display = "block";
+    } else {
+        box.style.display = "none";
+    }
+}
+
+/* =========================
+   REINICIAR
+========================= */
 function reiniciarSimulador() {
     formCalculadora.reset();
     areaResultado.innerHTML = "";
     window.location.hash = "calculadora";
 }
 
-// 6. Controle de Acessibilidade: Alternar Tema
-btnTema.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    btnTema.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+/* =========================
+   TEMA
+========================= */
+btnTema.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    btnTema.textContent =
+        document.body.classList.contains("dark") ? "☀️" : "🌙";
 });
