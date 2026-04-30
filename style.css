@@ -366,3 +366,27 @@ body.dark .header{
     grid-template-columns:1fr;
   }
 }
+
+/* BOTÃO TOPO */
+#btnTopo{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:50px;
+  height:50px;
+  border:none;
+  border-radius:50%;
+  background:var(--verde);
+  color:white;
+  font-size:1.4rem;
+  cursor:pointer;
+  box-shadow:0 10px 20px rgba(0,0,0,.18);
+  display:none;
+  z-index:999;
+  transition:.3s;
+}
+
+#btnTopo:hover{
+  background:var(--verde2);
+  transform:translateY(-4px) scale(1.05);
+}
