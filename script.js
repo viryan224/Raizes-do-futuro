@@ -48,7 +48,7 @@ function mostrarDepois(){
   "Rotação de culturas, irrigação correta e proteção vegetal aumentam a produtividade.";
 }
 
-/* CALCULADORA */
+/* CALCULADORA MELHORADA */
 document.getElementById("formCalc").addEventListener("submit", function(e){
   e.preventDefault();
 
@@ -64,43 +64,77 @@ document.getElementById("formCalc").addEventListener("submit", function(e){
 
   let titulo = "";
   let texto = "";
+  let nivel = "";
+  let solo = "";
+  let economia = "";
+  let principal = "";
   let dicas = "";
 
   if(pontos == 100){
     titulo = "Excelente 🌱";
-    texto = "Sua propriedade demonstra ótimo equilíbrio ambiental.";
+    nivel = "ALTO";
+    solo = "Saudável";
+    economia = "Muito Alta";
+    principal = "Manter e expandir tecnologia sustentável";
+    texto = "Sua propriedade demonstra ótimo equilíbrio entre produção e preservação.";
+
     dicas = `
-      • Continue investindo em irrigação inteligente.<br>
-      • Faça análise periódica do solo.<br>
-      • Amplie uso de energia renovável.
+    • Continue usando irrigação inteligente.<br>
+    • Invista em energia solar.<br>
+    • Faça análise periódica do solo.<br>
+    • Busque certificações ambientais.
     `;
   }
 
   else if(pontos >= 50){
     titulo = "Bom Caminho 👍";
-    texto = "Você já aplica práticas positivas, mas ainda pode evoluir.";
+    nivel = "MÉDIO";
+    solo = "Estável";
+    economia = "Alta";
+    principal = "Reduzir químicos e melhorar irrigação";
+    texto = "Você já possui boas práticas, mas ainda pode evoluir bastante.";
+
     dicas = `
-      • Reduza químicos agressivos.<br>
-      • Teste compostagem orgânica.<br>
-      • Implante rotação de culturas.
+    • Adote gotejamento.<br>
+    • Use compostagem orgânica.<br>
+    • Faça rotação de culturas.<br>
+    • Monitore desperdícios.
     `;
   }
 
   else{
     titulo = "Atenção ⚠️";
-    texto = "Seu modelo atual pode causar impacto ambiental futuro.";
+    nivel = "BAIXO";
+    solo = "Em risco";
+    economia = "Grande oportunidade";
+    principal = "Modernizar sistema produtivo";
+    texto = "Seu modelo atual pode causar impactos ambientais e custos maiores no futuro.";
+
     dicas = `
-      • Economize água.<br>
-      • Use fertilizantes orgânicos.<br>
-      • Proteja o solo contra erosão.
+    • Economize água.<br>
+    • Reduza químicos agressivos.<br>
+    • Proteja contra erosão.<br>
+    • Invista em práticas regenerativas.
     `;
   }
 
   resultado.innerHTML = `
     <div class="resultado-box">
+
       <h3>${titulo}</h3>
-      <p><strong>Área:</strong> ${area} hectares</p>
+
+      <p><strong>Área analisada:</strong> ${area} hectares</p>
       <p><strong>Índice Sustentável:</strong> ${pontos}%</p>
+
+      <br>
+
+      <p><strong>Nível Atual:</strong> ${nivel}</p>
+      <p><strong>Situação do Solo:</strong> ${solo}</p>
+      <p><strong>Potencial de Economia:</strong> ${economia}</p>
+      <p><strong>Foco Principal:</strong> ${principal}</p>
+
+      <br>
+
       <p>${texto}</p>
 
       <br>
@@ -108,9 +142,10 @@ document.getElementById("formCalc").addEventListener("submit", function(e){
       <button class="btn" onclick="abrirDicas()">Saber Mais</button>
 
       <div id="maisInfo" class="extra">
-        <h4>Como melhorar:</h4>
+        <h4>Plano Recomendado 🌱</h4>
         <p>${dicas}</p>
       </div>
+
     </div>
   `;
 });
