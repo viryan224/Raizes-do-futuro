@@ -108,44 +108,65 @@ document.getElementById("formCalc").addEventListener("submit", function(e){
   }
 
   resultado.innerHTML = `
-    <div class="resultado-box">
+    resultado.innerHTML = `
+<div class="resultado-box">
 
-      <h3>${titulo}</h3>
+<h3>${titulo}</h3>
 
-      <p><strong>Área:</strong> ${area} hectares</p>
-      <p><strong>Índice Sustentável:</strong> ${pontos}%</p>
+<p><strong>Área analisada:</strong> ${area} hectares</p>
 
-      <div style="background:#ddd; border-radius:20px; overflow:hidden; margin:15px 0;">
-        <div style="
-          width:${pontos}%;
-          background:#2d6a4f;
-          color:white;
-          padding:8px;
-          font-weight:bold;
-        ">
-          ${pontos}%
-        </div>
-      </div>
+<p><strong>Índice Sustentável:</strong> ${pontos}%</p>
 
-      <p><strong>Nível:</strong> ${nivel}</p>
-      <p><strong>Ranking:</strong> ${ranking}</p>
+<div style="background:#ddd;border-radius:20px;overflow:hidden;margin:15px 0;">
+  <div style="
+    width:${pontos}%;
+    background:#2d6a4f;
+    color:white;
+    padding:8px;
+    font-weight:bold;
+  ">
+    ${pontos}%
+  </div>
+</div>
 
-      <br>
+<p><strong>Classificação:</strong> ${ranking}</p>
 
-      <p>${texto}</p>
+<br>
 
-      <br>
+<h4>📌 Motivo da Nota</h4>
 
-      <button class="btn" onclick="abrirDicas()">Saber Mais</button>
+<p>
+Uso de água selecionado: <strong>${agua}</strong><br>
+Fertilizante selecionado: <strong>${fert}</strong>
+</p>
 
-      <div id="maisInfo" class="extra">
-        <h4>Plano Recomendado 🌱</h4>
-        <p>${dicas}</p>
-      </div>
+<br>
 
-    </div>
-  `;
-});
+<h4>🌱 Recomendação</h4>
+
+<p>${texto}</p>
+
+<br>
+
+<h4>📈 Benefícios ao melhorar</h4>
+
+<p>
+💧 Menor desperdício de água<br>
+🌱 Solo mais fértil<br>
+💰 Redução de custos futuros
+</p>
+
+<br>
+
+<button class="btn" onclick="abrirDicas()">Saber Mais</button>
+
+<div id="maisInfo" class="extra">
+  <h4>Plano Recomendado 🌱</h4>
+  <p>${dicas}</p>
+</div>
+
+</div>
+`;
 
 /* ABRIR DICAS */
 function abrirDicas(){
