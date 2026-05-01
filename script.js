@@ -166,6 +166,7 @@ Fertilizante selecionado: <strong>${fert}</strong>
 
 </div>
 `;
+});
 
 /* ABRIR DICAS */
 function abrirDicas(){
