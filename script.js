@@ -108,7 +108,6 @@ document.getElementById("formCalc").addEventListener("submit", function(e){
   }
 
   resultado.innerHTML = `
-    resultado.innerHTML = `
 <div class="resultado-box">
 
 <h3>${titulo}</h3>
