@@ -390,3 +390,32 @@ body.dark .header{
   background:var(--verde2);
   transform:translateY(-4px) scale(1.05);
 }
+
+/* POLIMENTO FINAL */
+
+.section h2{
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-align:center;
+}
+
+.card{
+  transition:0.3s;
+  box-shadow:0 8px 18px rgba(0,0,0,0.08);
+}
+
+.card:hover{
+  transform:translateY(-6px);
+}
+
+.resultado-box{
+  background:white;
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  margin-top:20px;
+}
+
+body.dark .resultado-box{
+  background:#1f1f1f;
+  }
