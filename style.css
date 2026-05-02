@@ -419,3 +419,23 @@ body.dark .header{
 body.dark .resultado-box{
   background:#1f1f1f;
   }
+
+/* MELHORIA DARK MODE - SEÇÃO IMPACTO */
+
+body.dark .texto-comparacao{
+  background: rgba(255,255,255,0.08);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+body.dark .texto-comparacao h3{
+  color: #ffffff;
+}
+
+body.dark .texto-comparacao p{
+  color: #f1f1f1;
+}
+
+body.dark .comparacao img{
+  filter: brightness(1.05);
+}
