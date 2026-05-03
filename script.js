@@ -198,3 +198,12 @@ function topoSite(){
     behavior:"smooth"
   });
 }
+
+document.getElementById("formContato").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  document.getElementById("msgContato").innerHTML =
+    "✅ Obrigado pelo seu feedback! Sua mensagem foi recebida.";
+
+  this.reset();
+});
