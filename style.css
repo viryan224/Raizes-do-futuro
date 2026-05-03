@@ -451,3 +451,13 @@ body.dark-mode .comparacao img{
   border-radius: 15px;
   filter: brightness(1.12) contrast(1.05);
 }
+/* AJUSTE CARDS SAIBA MAIS */
+
+.cards .card{
+  display: flex;
+  flex-direction: column;
+}
+
+.cards .card .btn{
+  margin-top: auto;
+}
