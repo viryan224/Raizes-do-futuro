@@ -461,3 +461,23 @@ body.dark-mode .comparacao img{
 .cards .card .btn{
   margin-top: auto;
 }
+
+.formulario{
+  max-width: 700px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario input,
+.formulario textarea{
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+}
+
+.formulario textarea{
+  resize: vertical;
+}
