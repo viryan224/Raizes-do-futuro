@@ -372,8 +372,25 @@ body.dark .header{
 @media(max-width:800px){
 
   .nav{
-    display:none;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:6px;
   }
+
+  .nav a{
+    font-size:0.85rem;
+    padding:6px 8px;
+  }
+
+  .hero-box h1{
+    font-size:2rem;
+  }
+
+  .comparacao{
+    grid-template-columns:1fr;
+  }
+}
 
   .hero-box h1{
     font-size:2rem;
