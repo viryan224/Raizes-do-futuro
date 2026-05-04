@@ -453,6 +453,29 @@ body.dark #contato input::placeholder,
 body.dark #contato textarea::placeholder {
   color: #aaa;
 }
-body{
-  background:red !important;
+/* ===== CORREÇÃO SIMPLES ===== */
+
+/* Antes e Depois */
+.comparacao{
+  background:#f4f7f3 !important;
+}
+
+.texto-comparacao{
+  color:#1e1e1e !important;
+}
+
+/* Formulário */
+#contato .formulario{
+  background:#f4f7f3 !important;
+}
+
+#contato input,
+#contato textarea{
+  background:white !important;
+  color:#1e1e1e !important;
+}
+
+#contato input::placeholder,
+#contato textarea::placeholder{
+  color:#666 !important;
 }
