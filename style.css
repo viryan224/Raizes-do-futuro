@@ -39,7 +39,7 @@ body{
   margin:auto;
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 .header{
   position:sticky;
   top:0;
@@ -66,7 +66,6 @@ body.dark .header{
   color:var(--verde2);
 }
 
-/* MENU */
 .nav{
   display:flex;
   gap:12px;
@@ -87,7 +86,6 @@ body.dark .header{
   color:var(--verde2);
 }
 
-/* BOTÃO TEMA */
 .tema-btn{
   background:var(--verde);
   color:white;
@@ -98,7 +96,7 @@ body.dark .header{
   cursor:pointer;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 .hero{
   min-height:85vh;
   background:url("depois.jpg") center/cover no-repeat;
@@ -113,7 +111,7 @@ body.dark .header{
 .overlay{
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,.45);
+  background:rgba(0,0,0,.35);
 }
 
 .hero-box{
@@ -128,12 +126,6 @@ body.dark .header{
   margin-bottom:20px;
 }
 
-.hero-box p{
-  margin-bottom:20px;
-  line-height:1.6;
-}
-
-/* FORM HERO */
 .hero-form{
   display:flex;
   gap:10px;
@@ -148,6 +140,7 @@ body.dark .header{
   width:250px;
 }
 
+/* BOTÃO */
 .btn{
   background:var(--verde);
   color:white;
@@ -162,9 +155,9 @@ body.dark .header{
   background:var(--verde2);
 }
 
-/* ================= SEÇÕES ================= */
+/* SEÇÕES */
 .section{
-  padding:70px 0;
+  padding:80px 0;
 }
 
 .titulo{
@@ -198,30 +191,57 @@ body.dark .header{
   margin-top:auto;
 }
 
-/* COMPARAÇÃO */
+/* ===== ANTES E DEPOIS ===== */
 .comparacao{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:20px;
+  align-items:center;
+  margin-top:30px;
 }
 
 .comparacao img{
   width:100%;
-  border-radius:10px;
+  height:300px;
+  object-fit:cover;
+  border-radius:15px;
 }
 
 .texto-comparacao{
-  padding:20px;
-}
-
-/* FORMULÁRIO */
-.formulario{
   background:var(--branco);
   padding:25px;
   border-radius:15px;
   box-shadow:var(--sombra);
-  max-width:600px;
-  margin:auto;
+}
+
+/* TEXTO VISÍVEL */
+.texto-comparacao h3{
+  color:#111;
+  margin-bottom:10px;
+}
+
+.texto-comparacao p{
+  color:#333;
+  line-height:1.6;
+}
+
+/* BOTÕES */
+.troca-btns{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-bottom:20px;
+  flex-wrap:wrap;
+}
+
+/* ===== FORMULÁRIO ===== */
+.formulario{
+  background:var(--branco);
+  padding:30px;
+  border-radius:20px;
+  box-shadow:var(--sombra);
+  max-width:500px;
+  margin:40px auto;
   display:flex;
   flex-direction:column;
   gap:15px;
@@ -229,12 +249,14 @@ body.dark .header{
 
 .formulario input,
 .formulario textarea{
-  padding:12px;
-  border:none;
-  border-radius:10px;
+  padding:14px;
+  border:1px solid #ddd;
+  border-radius:12px;
+  font-size:1rem;
 }
 
 .formulario textarea{
+  min-height:120px;
   resize:vertical;
 }
 
@@ -269,10 +291,38 @@ body.dark .header{
   background:var(--verde);
   color:white;
   display:none;
-  cursor:pointer;
 }
 
-/* ================= RESPONSIVO ================= */
+/* ===== DARK MODE COMPLETO ===== */
+body.dark{
+  background:#101512;
+  color:#f1f1f1;
+}
+
+body.dark .card,
+body.dark .formulario,
+body.dark .resultado-box,
+body.dark .texto-comparacao{
+  background:#1c1c1c;
+  color:#ffffff;
+}
+
+body.dark p{
+  color:#e0e0e0;
+}
+
+body.dark input,
+body.dark textarea{
+  background:#2a2a2a;
+  color:#fff;
+  border:none;
+}
+
+body.dark .header{
+  background:rgba(24,32,28,0.95);
+}
+
+/* RESPONSIVO */
 @media(max-width:900px){
 
   .nav-area{
@@ -304,42 +354,8 @@ body.dark .header{
   .comparacao{
     grid-template-columns:1fr;
   }
-}
-/* GARANTE TEXTO VISÍVEL SEMPRE */
 
-.texto-comparacao,
-.card,
-.formulario,
-.resultado-box{
-  color: var(--texto);
-}
-
-/* CORREÇÃO DARK MODE */
-
-body.dark .texto-comparacao,
-body.dark .card,
-body.dark .formulario,
-body.dark .resultado-box{
-  background:#1f1f1f;
-  color:#ffffff;
-}
-
-/* PARÁGRAFOS */
-
-.texto-comparacao p{
-  color: #333;
-}
-
-body.dark .texto-comparacao p{
-  color: #e0e0e0;
-}
-
-/* TÍTULOS */
-
-.texto-comparacao h3{
-  color: #111;
-}
-
-body.dark .texto-comparacao h3{
-  color: #ffffff;
+  .comparacao img{
+    height:220px;
+  }
     }
