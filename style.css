@@ -7,12 +7,14 @@
   --sombra:0 10px 25px rgba(0,0,0,.12);
 }
 
+/* DARK MODE */
 body.dark{
   --claro:#101512;
   --branco:#18201c;
   --texto:#f1f1f1;
 }
 
+/* RESET */
 *{
   margin:0;
   padding:0;
@@ -21,6 +23,7 @@ body.dark{
 
 html{
   scroll-behavior:smooth;
+  scroll-padding-top:90px;
 }
 
 body{
@@ -29,13 +32,137 @@ body{
   color:var(--texto);
 }
 
-/* GERAL */
+/* CONTAINER */
 .container{
   width:90%;
   max-width:1100px;
   margin:auto;
 }
 
+/* ================= HEADER ================= */
+.header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(10px);
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+body.dark .header{
+  background:#18201c;
+}
+
+.nav-area{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 0;
+}
+
+.logo{
+  font-size:1.5rem;
+  font-weight:bold;
+  color:var(--verde2);
+}
+
+/* MENU */
+.nav{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.nav a{
+  text-decoration:none;
+  color:var(--texto);
+  font-weight:bold;
+  padding:8px 12px;
+  border-radius:10px;
+  transition:.3s;
+}
+
+.nav a:hover{
+  background:rgba(45,106,79,.12);
+  color:var(--verde2);
+}
+
+/* BOTÃO TEMA */
+.tema-btn{
+  background:var(--verde);
+  color:white;
+  border:none;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+/* ================= HERO ================= */
+.hero{
+  min-height:85vh;
+  background:url("depois.jpg") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding-top:100px;
+  position:relative;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.45);
+}
+
+.hero-box{
+  position:relative;
+  z-index:2;
+  color:white;
+  max-width:700px;
+}
+
+.hero-box h1{
+  font-size:3rem;
+  margin-bottom:20px;
+}
+
+.hero-box p{
+  margin-bottom:20px;
+  line-height:1.6;
+}
+
+/* FORM HERO */
+.hero-form{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.hero-form input{
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  width:250px;
+}
+
+.btn{
+  background:var(--verde);
+  color:white;
+  border:none;
+  padding:12px 20px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.btn:hover{
+  background:var(--verde2);
+}
+
+/* ================= SEÇÕES ================= */
 .section{
   padding:70px 0;
 }
@@ -43,258 +170,82 @@ body{
 .titulo{
   text-align:center;
   font-size:2rem;
-  margin-bottom:35px;
+  margin-bottom:30px;
 }
 
-.branco{
-  color:white;
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
 }
 
-.btn{
-  background:var(--verde);
-  color:white;
-  border:none;
-  padding:12px 22px;
-  border-radius:10px;
-  cursor:pointer;
-  font-weight:bold;
+.card{
+  background:var(--branco);
+  padding:20px;
+  border-radius:15px;
+  box-shadow:var(--sombra);
   transition:.3s;
+  display:flex;
+  flex-direction:column;
 }
 
-.btn:hover{
-  transform:translateY(-3px);
-  background:var(--verde2);
+.card:hover{
+  transform:translateY(-5px);
 }
 
-.pequeno{
-  padding:10px 15px;
+.card .btn{
+  margin-top:auto;
 }
 
-.ativo{
-  background:var(--verde2);
+/* COMPARAÇÃO */
+.comparacao{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
 }
 
-/* --- MENU E CABEÇALHO --- */
-.nav-area {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
+.comparacao img{
+  width:100%;
+  border-radius:10px;
 }
 
-.logo {
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: var(--verde2);
-    letter-spacing: .5px;
+.texto-comparacao{
+  padding:20px;
 }
 
-.nav {
-    display: flex;
-    gap: 14px;
-    align-items: center;
-}
-
-.nav a {
-    text-decoration: none;
-    color: var(--texto);
-    font-weight: 700;
-    padding: 10px 16px;
-    border-radius: 12px;
-    transition: .3s;
-}
-
-.nav a:hover {
-    background: rgba(45, 106, 79, .12);
-    color: var(--verde2);
-}
-
-.tema-btn {
-    background: var(--verde);
-    color: white;
-    border: none;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* --- HERO (AQUI ESTÁ A CORREÇÃO DO ESPAÇO) --- */
-.hero {
-    min-height: 100vh; 
-    background: url("depois.jpg") center/cover no-repeat;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding-top: 90px; /* Isso cria o espaço para o menu sticky */
-}
-
-.hero-box {
-    position: relative;
-    z-index: 2;
-    color: white;
-    width: 90%;
-    max-width: 800px;
-}
-
-.hero-box h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
-}
-
-/* --- RESPONSIVO (O QUE ACONTECE NO CELULAR) --- */
-@media (max-width: 850px) {
-    .nav-area {
-        flex-direction: column;
-        gap: 15px;
-        padding: 20px 0;
-    }
-
-    .nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-    }
-
-    .nav a {
-        padding: 8px 12px;
-        font-size: 0.9rem;
-    }
-
-    .hero-box h1 {
-        font-size: 2.2rem;
-    }
-
-    .hero-form {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero-form input {
-        width: 100%;
-    }
-}
-
-/* --- SEÇÃO CORRIGIDA: RESPONSIVIDADE E AJUSTES DE FLUXO --- */
-
-/* 1. Correção para o Menu não cobrir o conteúdo ao clicar nos links */
-html {
-  scroll-behavior: smooth;
-  /* Ajuste este valor de acordo com a altura do seu menu (aprox. 80px) */
-  scroll-padding-top: 85px; 
-}
-
-/* 2. Ajuste do Hero para garantir que ele respeite o espaço do Header */
-.hero {
-  min-height: 85vh; /* Mudamos de height para min-height */
-  background: url("depois.jpg") center/cover no-repeat;
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding-top: 20px; /* Um pequeno respiro */
-}
-
-/* 3. Media Query Unificada (Para Tablet e Celular) */
-@media (max-width: 900px) {
-  .nav-area {
-    flex-direction: column;
-    gap: 10px;
-    padding: 15px 0;
-  }
-
-  .nav {
-    justify-content: center;
-    gap: 5px;
-  }
-
-  .nav a {
-    padding: 6px 10px;
-    font-size: 0.85rem;
-  }
-
-  .logo {
-    font-size: 1.3rem;
-  }
-
-  .hero {
-    height: auto;
-    min-height: 70vh;
-    padding: 60px 0; /* Dá espaço para o conteúdo não ficar apertado */
-  }
-
-  .hero-box h1 {
-    font-size: 2rem;
-  }
-
-  .comparacao {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* 4. Ajustes extras de limpeza (Removendo chaves duplicadas do código anterior) */
-.cards .card {
-  display: flex;
-  flex-direction: column;
-}
-
-.cards .card .btn {
-  margin-top: auto;
-}
-
-#btnTopo {
-  z-index: 1001; /* Garante que fique acima de tudo */
-}
-
-/* FORM */
+/* FORMULÁRIO */
 .formulario{
   background:var(--branco);
-  padding:30px;
-  border-radius:18px;
+  padding:25px;
+  border-radius:15px;
   box-shadow:var(--sombra);
   max-width:600px;
   margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
 }
 
 .formulario input,
-.formulario select{
-  width:100%;
+.formulario textarea{
   padding:12px;
-  margin-bottom:15px;
-  border:1px solid #ccc;
+  border:none;
   border-radius:10px;
 }
 
-/* RESULTADO */
-#resultado{
-  margin-top:25px;
+.formulario textarea{
+  resize:vertical;
 }
 
+/* RESULTADO */
 .resultado-box{
   background:var(--branco);
-  padding:25px;
-  border-radius:18px;
+  padding:20px;
+  border-radius:15px;
   box-shadow:var(--sombra);
+  margin-top:20px;
   text-align:center;
-}
-
-.resultado-box h3{
-  margin-bottom:10px;
-}
-
-.extra{
-  display:none;
-  margin-top:15px;
-  text-align:left;
-  line-height:1.7;
 }
 
 /* FOOTER */
@@ -302,161 +253,55 @@ html {
   background:var(--verde2);
   color:white;
   text-align:center;
-  padding:25px;
+  padding:20px;
   margin-top:50px;
-}
-
-/* RESPONSIVO */
-
-  .hero-box h1{
-    font-size:2rem;
-  }
-
-  .comparacao{
-    grid-template-columns:1fr;
-  }
 }
 
 /* BOTÃO TOPO */
 #btnTopo{
   position:fixed;
-  right:20px;
   bottom:20px;
-  width:50px;
-  height:50px;
+  right:20px;
+  width:45px;
+  height:45px;
   border:none;
   border-radius:50%;
   background:var(--verde);
   color:white;
-  font-size:1.4rem;
-  cursor:pointer;
-  box-shadow:0 10px 20px rgba(0,0,0,.18);
   display:none;
-  z-index:999;
-  transition:.3s;
+  cursor:pointer;
 }
 
-#btnTopo:hover{
-  background:var(--verde2);
-  transform:translateY(-4px) scale(1.05);
-}
+/* ================= RESPONSIVO ================= */
+@media(max-width:900px){
 
-/* POLIMENTO FINAL */
-
-.section h2{
-  font-size: 2rem;
-  margin-bottom: 25px;
-  text-align:center;
-}
-
-.card{
-  transition:0.3s;
-  box-shadow:0 8px 18px rgba(0,0,0,0.08);
-}
-
-.card:hover{
-  transform:translateY(-6px);
-}
-
-.resultado-box{
-  background:white;
-  padding:25px;
-  border-radius:18px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-  margin-top:20px;
-}
-
-body.dark .resultado-box{
-  background:#1f1f1f;
+  .nav-area{
+    flex-direction:column;
+    gap:10px;
   }
 
-/* DARK MODE - SEÇÃO IMPACTO REAL */
-
-body.dark-mode #impacto{
-  background: #111 !important;
-}
-
-body.dark-mode .comparacao{
-  background: #1c1c1c;
-  padding: 25px;
-  border-radius: 18px;
-}
-
-body.dark-mode .texto-comparacao{
-  background: #242424;
-  padding: 20px;
-  border-radius: 15px;
-}
-
-body.dark-mode .texto-comparacao h3{
-  color: #ffffff;
-}
-
-body.dark-mode .texto-comparacao p{
-  color: #f5f5f5;
-  line-height: 1.7;
-}
-
-body.dark-mode .comparacao img{
-  border-radius: 15px;
-  filter: brightness(1.12) contrast(1.05);
-}
-/* AJUSTE CARDS SAIBA MAIS */
-
-.cards .card{
-  display: flex;
-  flex-direction: column;
-}
-
-.cards .card .btn{
-  margin-top: auto;
-}
-
-.formulario{
-  max-width: 700px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.formulario input,
-.formulario textarea{
-  padding: 15px;
-  border: none;
-  border-radius: 12px;
-  font-size: 1rem;
-}
-
-.formulario textarea{
-  resize: vertical;
-}
-
-/* Vá até o final do seu arquivo style.css e cole isso */
-
-@media screen and (max-width: 800px) {
-  
-  /* Força o Header a não flutuar sobre o conteúdo */
-  header, .header {
-    position: relative !important; /* Muda de fixed/sticky para o fluxo normal */
-    height: auto !important;
+  .nav{
+    justify-content:center;
   }
 
-  /* Faz o Hero aparecer LOGO ABAIXO do menu, sem sobreposição */
-  .hero {
-    display: flex !important;
-    flex-direction: column !important;
-    height: auto !important;
-    min-height: 70vh !important;
-    padding: 60px 20px !important; /* Espaço interno para o texto não colar */
-    margin-top: 0 !important; 
-    position: relative !important;
-    top: 0 !important;
+  .hero{
+    padding:80px 20px;
+    min-height:70vh;
   }
 
-  /* Garante que o container interno não tenha margens negativas */
-  .hero-box {
-    margin: 0 auto !important;
-    padding-top: 20px !important;
+  .hero-box h1{
+    font-size:2rem;
+  }
+
+  .hero-form{
+    flex-direction:column;
+  }
+
+  .hero-form input{
+    width:100%;
+  }
+
+  .comparacao{
+    grid-template-columns:1fr;
   }
 }
