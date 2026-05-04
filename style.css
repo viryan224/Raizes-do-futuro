@@ -480,9 +480,9 @@ body.dark #contato textarea::placeholder {
   color:#666 !important;
 }
 #impacto{
-  background: var(--verde) !important;
+  background: linear-gradient(135deg,#2d6a4f,#1b4332) !important;
 }
 
 #contato{
-  background: var(--verde2) !important;
+  background: linear-gradient(135deg,#2d6a4f,#1b4332) !important;
 }
