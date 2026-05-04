@@ -491,44 +491,31 @@ body.dark-mode .comparacao img{
   resize: vertical;
 }
 
-@media(max-width:800px){
+/* Vá até o final do seu arquivo style.css e cole isso */
 
-  /* Forçamos o header a ter uma altura automática para caber tudo dentro */
-  .header {
+@media screen and (max-width: 800px) {
+  
+  /* Força o Header a não flutuar sobre o conteúdo */
+  header, .header {
+    position: relative !important; /* Muda de fixed/sticky para o fluxo normal */
     height: auto !important;
-    position: fixed; /* Ou relative, dependendo do seu projeto */
-    top: 0;
-    width: 100%;
-    z-index: 1000;
   }
 
-  .nav-area {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 10px !important;
-    padding: 15px 0 !important;
-  }
-
-  /* O PULO DO GATO: Vamos empurrar o HERO com margem em vez de padding */
+  /* Faz o Hero aparecer LOGO ABAIXO do menu, sem sobreposição */
   .hero {
-    margin-top: 180px !important; /* Ajuste esse valor para mais ou menos */
-    min-height: 60vh !important;
-    height: auto !important;
-    padding-top: 20px !important;
     display: flex !important;
     flex-direction: column !important;
-    justify-content: center !important;
+    height: auto !important;
+    min-height: 70vh !important;
+    padding: 60px 20px !important; /* Espaço interno para o texto não colar */
+    margin-top: 0 !important; 
+    position: relative !important;
+    top: 0 !important;
   }
 
-  .hero-box h1 {
-    font-size: 1.8rem !important;
-    margin-top: 10px !important;
-  }
-
-  /* Garante que o overlay do hero não suba para o menu */
-  .overlay {
-    top: 0;
-    height: 100%;
+  /* Garante que o container interno não tenha margens negativas */
+  .hero-box {
+    margin: 0 auto !important;
+    padding-top: 20px !important;
   }
 }
