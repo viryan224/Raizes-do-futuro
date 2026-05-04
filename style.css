@@ -305,3 +305,41 @@ body.dark .header{
     grid-template-columns:1fr;
   }
 }
+/* GARANTE TEXTO VISÍVEL SEMPRE */
+
+.texto-comparacao,
+.card,
+.formulario,
+.resultado-box{
+  color: var(--texto);
+}
+
+/* CORREÇÃO DARK MODE */
+
+body.dark .texto-comparacao,
+body.dark .card,
+body.dark .formulario,
+body.dark .resultado-box{
+  background:#1f1f1f;
+  color:#ffffff;
+}
+
+/* PARÁGRAFOS */
+
+.texto-comparacao p{
+  color: #333;
+}
+
+body.dark .texto-comparacao p{
+  color: #e0e0e0;
+}
+
+/* TÍTULOS */
+
+.texto-comparacao h3{
+  color: #111;
+}
+
+body.dark .texto-comparacao h3{
+  color: #ffffff;
+    }
