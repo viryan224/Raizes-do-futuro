@@ -480,9 +480,9 @@ body.dark #contato textarea::placeholder {
   color:#666 !important;
 }
 #impacto{
-  background: red !important;
+  background: var(--verde) !important;
 }
 
 #contato{
-  background: blue !important;
+  background: var(--verde2) !important;
 }
