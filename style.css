@@ -493,6 +493,7 @@ body.dark-mode .comparacao img{
 
 @media(max-width:800px){
 
+  /* 1. Ajuste na Navegação */
   .nav-area{
     display:flex;
     flex-direction:column;
@@ -522,15 +523,34 @@ body.dark-mode .comparacao img{
     height:36px;
   }
 
-  .hero{
-    height:78vh;
+  /* 2. CORREÇÃO DO HERO - O segredo está aqui */
+  .hero {
+    /* Em vez de height fixa, usamos min-height para o conteúdo não vazar */
+    min-height: 80vh; 
+    height: auto; 
+    
+    /* Adicionamos um padding no topo igual à altura do seu menu mobile */
+    /* Isso empurra o título "Agro Forte" para baixo do menu */
+    padding-top: 160px; 
+    
+    /* Garante que o conteúdo fique centralizado verticalmente após o padding */
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .hero-box h1{
     font-size:2rem;
+    line-height: 1.2;
   }
 
+  /* 3. Ajuste da comparação */
   .comparacao{
     grid-template-columns:1fr;
   }
+}
+
+/* DICA EXTRA: Evite que o clique no menu cubra o título das seções */
+html {
+  scroll-padding-top: 150px; /* Ajuste esse valor conforme a altura do seu header */
 }
