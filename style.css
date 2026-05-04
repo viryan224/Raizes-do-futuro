@@ -359,3 +359,97 @@ body.dark .header{
     height:220px;
   }
     }
+
+/* ========================= */
+/* CORREÇÃO SEÇÃO VERDE */
+/* ========================= */
+
+.verde {
+  color: white;
+}
+
+.verde p,
+.verde h2,
+.verde h3 {
+  color: white;
+}
+
+/* ========================= */
+/* ANTES / DEPOIS MELHORADO */
+/* ========================= */
+
+.comparacao {
+  background: rgba(255,255,255,0.95);
+  border-radius: 18px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: var(--sombra);
+}
+
+.texto-comparacao {
+  padding: 30px;
+  color: #222; /* força texto escuro */
+}
+
+.texto-comparacao h3 {
+  color: var(--verde2);
+}
+
+.texto-comparacao p {
+  color: #333;
+}
+
+/* ========================= */
+/* FORM CONTATO CORRIGIDO */
+/* ========================= */
+
+#contato .formulario {
+  background: white;
+}
+
+#contato input,
+#contato textarea {
+  background: #fff;
+  color: #222;
+}
+
+#contato input::placeholder,
+#contato textarea::placeholder {
+  color: #666;
+}
+
+/* ========================= */
+/* DARK MODE CORRETO */
+/* ========================= */
+
+body.dark .verde {
+  color: white;
+}
+
+body.dark .comparacao {
+  background: #1c1c1c;
+}
+
+body.dark .texto-comparacao {
+  color: white;
+}
+
+body.dark .texto-comparacao p {
+  color: #ddd;
+}
+
+body.dark #contato .formulario {
+  background: #1f1f1f;
+}
+
+body.dark #contato input,
+body.dark #contato textarea {
+  background: #2a2a2a;
+  color: white;
+}
+
+body.dark #contato input::placeholder,
+body.dark #contato textarea::placeholder {
+  color: #aaa;
+}
