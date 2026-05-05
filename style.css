@@ -486,3 +486,62 @@ body.dark #contato textarea::placeholder {
 #contato{
   background: linear-gradient(135deg,#2d6a4f,#1b4332) !important;
 }
+/* ===== ANIMAÇÕES E MELHORIAS VISUAIS ===== */
+
+/* TRANSIÇÃO GLOBAL */
+*{
+  transition: all 0.3s ease;
+}
+
+/* BOTÕES MAIS SUAVES */
+.btn{
+  transition: all 0.3s ease;
+}
+
+.btn:hover{
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* CARDS COM ANIMAÇÃO */
+.card{
+  transition: all 0.3s ease;
+}
+
+.card:hover{
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* RESULTADO COM ENTRADA SUAVE */
+.resultado-box{
+  opacity: 0;
+  transform: translateY(20px);
+  animation: aparecer 0.6s ease forwards;
+}
+
+@keyframes aparecer{
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MENSAGEM INTELIGENTE */
+#mensagem-inteligente{
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--verde2);
+}
+
+/* ERRO VISUAL */
+#mensagem-erro{
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* BARRA DE PROGRESSO MAIS BONITA */
+.resultado-box div[style*="width"]{
+  transition: width 0.8s ease;
+  border-radius: 20px;
+  }
