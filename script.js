@@ -56,8 +56,8 @@ function mostrarDepois(){
   document.getElementById("tituloSolo").innerText = "Modelo Sustentável";
 
   document.getElementById("descSolo").innerText =
-    "A agricultura sustentável busca equilibrar produção e preservação ambiental. 
-    Com técnicas adequadas, é possível aumentar a produtividade e conservar os recursos naturais.";
+  "A agricultura sustentável busca equilibrar produção e preservação ambiental. " +
+  "Com técnicas adequadas, é possível aumentar a produtividade e conservar os recursos naturais.";
 
   document.getElementById("listaSolo").innerHTML =
     "✅ Solo mais fértil e produtivo<br>" +
