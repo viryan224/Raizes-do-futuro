@@ -68,125 +68,143 @@ function mostrarDepois(){
 }
 
 /* CALCULADORA PREMIUM */
+
 document.getElementById("formCalc").addEventListener("submit", function(e){
   e.preventDefault();
 
-  const area = document.getElementById("area").value;
-  const agua = document.getElementById("agua").value;
-  const fert = document.getElementById("fertilizante").value;
+  const area = Number(document.getElementById("area").value);
+  const agua = Number(document.getElementById("agua").value);
+  const fert = Number(document.getElementById("fertilizante").value);
   const resultado = document.getElementById("resultado");
 
   let pontos = 0;
 
-  if(agua == "1") pontos += 50;
-  if(fert == "1") pontos += 50;
+  // CÁLCULO MAIS INTELIGENTE
+  pontos += (4 - agua) * 30; // menos água = melhor
+  pontos += (4 - fert) * 35; // mais orgânico = melhor
 
-  let titulo = "";
-  let texto = "";
-  let nivel = "";
-  let ranking = "";
-  let dicas = "";
+  // LIMITAR
+  if(pontos > 100) pontos = 100;
 
-  if(pontos == 100){
-    titulo = "Excelente 🌱";
+  // CLASSIFICAÇÃO
+  let titulo, nivel, ranking, cor, impacto, recomendacao;
+
+  if(pontos >= 80){
+    titulo = "🌱 Sustentabilidade Elevada";
     nivel = "ALTO";
-    ranking = "🌳 Guardião da Terra";
-    texto = "Sua propriedade demonstra alto equilíbrio ambiental.";
+    ranking = "🌳 Guardião do Agro Sustentável";
+    cor = "#2d6a4f";
 
-    dicas = `
-      • Continue inovando.<br>
-      • Invista em energia limpa.<br>
-      • Amplie tecnologias rurais.
+    impacto = `
+    Sua propriedade apresenta excelente equilíbrio ambiental.
+    Isso significa maior produtividade com menor impacto na natureza.
+    `;
+
+    recomendacao = `
+    • Invista em tecnologias de precisão<br>
+    • Amplie o uso de energia renovável<br>
+    • Continue com práticas sustentáveis
     `;
   }
 
   else if(pontos >= 50){
-    titulo = "Bom Caminho 👍";
+    titulo = "🌿 Sustentabilidade Moderada";
     nivel = "MÉDIO";
-    ranking = "🌿 Produtor Consciente";
-    texto = "Você já aplica boas práticas, mas ainda pode evoluir.";
+    ranking = "🌾 Produtor Consciente";
+    cor = "#95d5b2";
 
-    dicas = `
-      • Adote gotejamento.<br>
-      • Faça rotação de culturas.<br>
-      • Reduza desperdícios.
+    impacto = `
+    Você já aplica boas práticas, mas ainda há espaço para evolução.
+    Pequenas mudanças podem gerar grandes resultados.
+    `;
+
+    recomendacao = `
+    • Reduza o uso de água<br>
+    • Utilize mais fertilizantes orgânicos<br>
+    • Faça rotação de culturas
     `;
   }
 
   else{
-    titulo = "Atenção ⚠️";
+    titulo = "⚠️ Baixa Sustentabilidade";
     nivel = "BAIXO";
-    ranking = "🌱 Produtor Iniciante";
-    texto = "Seu sistema atual precisa modernização sustentável.";
+    ranking = "🌱 Produtor em Transição";
+    cor = "#d00000";
 
-    dicas = `
-      • Economize água.<br>
-      • Proteja o solo.<br>
-      • Use adubação orgânica.
+    impacto = `
+    O sistema atual pode causar impactos negativos ao solo e ao meio ambiente.
+    Melhorias são necessárias para garantir produtividade futura.
+    `;
+
+    recomendacao = `
+    • Diminua o uso de químicos<br>
+    • Proteja o solo com cobertura vegetal<br>
+    • Adote irrigação eficiente
     `;
   }
 
+  // IMPACTO REAL (diferencial)
+  let economiaAgua = (3 - agua) * 20;
+  let economiaCusto = (3 - fert) * 15;
+
+  // RESULTADO FINAL (MAIS BONITO E FORTE)
   resultado.innerHTML = `
-<div class="resultado-box">
+  <div class="resultado-box">
 
-<h3>${titulo}</h3>
+    <h2 style="color:${cor}; margin-bottom:10px;">${titulo}</h2>
 
-<p><strong>Área analisada:</strong> ${area} hectares</p>
+    <p><strong>Área analisada:</strong> ${area} hectares</p>
 
-<p><strong>Índice Sustentável:</strong> ${pontos}%</p>
+    <p><strong>Índice de Sustentabilidade:</strong> ${pontos}%</p>
 
-<div style="background:#ddd;border-radius:20px;overflow:hidden;margin:15px 0;">
-  <div style="
-    width:${pontos}%;
-    background:#2d6a4f;
-    color:white;
-    padding:8px;
-    font-weight:bold;
-  ">
-    ${pontos}%
+    <div style="background:#ddd;border-radius:20px;overflow:hidden;margin:15px 0;">
+      <div style="
+        width:${pontos}%;
+        background:${cor};
+        color:white;
+        padding:10px;
+        font-weight:bold;
+        text-align:center;
+      ">
+        ${pontos}%
+      </div>
+    </div>
+
+    <p><strong>Classificação:</strong> ${ranking}</p>
+
+    <br>
+
+    <h4>🌎 Impacto na Propriedade</h4>
+    <p>${impacto}</p>
+
+    <br>
+
+    <h4>📊 Estimativa de Ganhos</h4>
+    <p>
+      💧 Economia de água: até ${economiaAgua > 0 ? economiaAgua : 0}%<br>
+      💰 Redução de custos: até ${economiaCusto > 0 ? economiaCusto : 0}%
+    </p>
+
+    <br>
+
+    <h4>🚀 Recomendações Inteligentes</h4>
+    <p>${recomendacao}</p>
+
+    <br>
+
+    <button class="btn" onclick="abrirDicas()">Ver Plano Completo</button>
+
+    <div id="maisInfo" class="extra">
+      <h4>🌱 Plano de Evolução Sustentável</h4>
+      <p>
+        A adoção gradual de práticas sustentáveis melhora a produtividade,
+        reduz custos e preserva o meio ambiente a longo prazo.
+      </p>
+    </div>
+
   </div>
-</div>
-
-<p><strong>Classificação:</strong> ${ranking}</p>
-
-<br>
-
-<h4>📌 Motivo da Nota</h4>
-
-<p>
-Uso de água selecionado: <strong>${agua}</strong><br>
-Fertilizante selecionado: <strong>${fert}</strong>
-</p>
-
-<br>
-
-<h4>🌱 Recomendação</h4>
-
-<p>${texto}</p>
-
-<br>
-
-<h4>📈 Benefícios ao melhorar</h4>
-
-<p>
-💧 Menor desperdício de água<br>
-🌱 Solo mais fértil<br>
-💰 Redução de custos futuros
-</p>
-
-<br>
-
-<button class="btn" onclick="abrirDicas()">Saber Mais</button>
-
-<div id="maisInfo" class="extra">
-  <h4>Plano Recomendado 🌱</h4>
-  <p>${dicas}</p>
-</div>
-
-</div>
-`;
+  `;
 });
-
 /* ABRIR DICAS */
 function abrirDicas(){
   const box = document.getElementById("maisInfo");
