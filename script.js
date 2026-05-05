@@ -91,44 +91,60 @@ document.getElementById("formCalc").addEventListener("submit", function(e){
   }
 
   // CÁLCULO
-  let pontos = (4 - agua) * 30 + (4 - fert) * 35;
-  if(pontos > 100) pontos = 100;
+  const aguaNum = Number(agua);
+const fertNum = Number(fert);
 
-  let titulo, ranking, cor, texto, dicas;
+let pontos = 0;
 
-  if(pontos >= 80){
-    titulo = "Excelente 🌱";
-    ranking = "🌳 Guardião da Terra";
-    cor = "#2d6a4f";
-    texto = "Sua produção demonstra alto equilíbrio ambiental.";
-    dicas = `
-      • Continue inovando<br>
-      • Invista em energia limpa<br>
-      • Amplie tecnologias rurais
-    `;
-  }
-  else if(pontos >= 50){
-    titulo = "Bom Caminho 👍";
-    ranking = "🌿 Produtor Consciente";
-    cor = "#e9c46a";
-    texto = "Você já aplica boas práticas, mas pode melhorar.";
-    dicas = `
-      • Adote irrigação eficiente<br>
-      • Faça rotação de culturas<br>
-      • Reduza desperdícios
-    `;
-  }
-  else{
-    titulo = "Atenção ⚠️";
-    ranking = "🌱 Produtor Iniciante";
-    cor = "#d62828";
-    texto = "Seu sistema precisa de melhorias sustentáveis.";
-    dicas = `
-      • Economize água<br>
-      • Proteja o solo<br>
-      • Use adubação orgânica
-    `;
-  }
+// Água tem mais impacto ambiental
+if(aguaNum == 1) pontos += 60;
+else if(aguaNum == 2) pontos += 30;
+else pontos += 10;
+
+// Fertilizante
+if(fertNum == 1) pontos += 40;
+else if(fertNum == 2) pontos += 20;
+else pontos += 5;
+
+// Garantir limite
+if(pontos > 100) pontos = 100;
+
+let titulo, ranking, cor, texto, dicas;
+
+// Classificação
+if(pontos >= 80){
+  titulo = "Excelente 🌱";
+  ranking = "🌳 Guardião da Terra";
+  cor = "#2d6a4f";
+  texto = "Sua produção demonstra alto equilíbrio ambiental.";
+  dicas = `
+    • Continue inovando<br>
+    • Invista em energia limpa<br>
+    • Amplie tecnologias rurais
+  `;
+}
+else if(pontos >= 50){
+  titulo = "Bom Caminho 👍";
+  ranking = "🌿 Produtor Consciente";
+  cor = "#e9c46a";
+  texto = "Você já aplica boas práticas, mas pode melhorar.";
+  dicas = `
+    • Adote irrigação eficiente<br>
+    • Faça rotação de culturas<br>
+    • Reduza desperdícios
+  `;
+}
+else{
+  titulo = "Atenção ⚠️";
+  ranking = "🌱 Produtor Iniciante";
+  cor = "#d62828";
+  texto = "Seu sistema precisa de melhorias sustentáveis.";
+  dicas = `
+    • Economize água<br>
+    • Proteja o solo<br>
+    • Use adubação orgânica
+  `;
+}
 
   // DIAGNÓSTICO INTELIGENTE
   let problema = "";
