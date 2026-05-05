@@ -545,3 +545,29 @@ body.dark #contato textarea::placeholder {
   transition: width 0.8s ease;
   border-radius: 20px;
   }
+/* CORREÇÃO ANTES/DEPOIS NO CELULAR */
+@media (max-width: 800px){
+
+  .comparacao{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .comparacao img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .texto-comparacao{
+    width: 100%;
+    text-align: left;
+  }
+
+  #listaSolo{
+    line-height: 1.6;
+  }
+
+}
