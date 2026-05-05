@@ -83,62 +83,74 @@ document.getElementById("formCalc").addEventListener("submit", function(e){
   erro.style.display = "none";
   msgInteligente.innerHTML = "";
 
-  // ✅ VALIDAÇÃO
+  // VALIDAÇÃO
   if(!area || area <= 0){
     erro.style.display = "block";
-    erro.innerText = "⚠️ Informe uma área válida maior que zero.";
+    erro.innerText = "⚠️ Informe uma área válida.";
     return;
   }
 
-  if(!agua || !fert){
-    erro.style.display = "block";
-    erro.innerText = "⚠️ Preencha todos os campos corretamente.";
-    return;
-  }
-
-  // 🔢 CÁLCULO
+  // CÁLCULO
   let pontos = (4 - agua) * 30 + (4 - fert) * 35;
   if(pontos > 100) pontos = 100;
 
-  // 🎨 CLASSIFICAÇÃO
-  let cor, titulo;
+  let titulo, ranking, cor, texto, dicas;
 
   if(pontos >= 80){
+    titulo = "Excelente 🌱";
+    ranking = "🌳 Guardião da Terra";
     cor = "#2d6a4f";
-    titulo = "🌱 Sustentabilidade Elevada";
+    texto = "Sua produção demonstra alto equilíbrio ambiental.";
+    dicas = `
+      • Continue inovando<br>
+      • Invista em energia limpa<br>
+      • Amplie tecnologias rurais
+    `;
   }
   else if(pontos >= 50){
+    titulo = "Bom Caminho 👍";
+    ranking = "🌿 Produtor Consciente";
     cor = "#e9c46a";
-    titulo = "🌿 Sustentabilidade Moderada";
+    texto = "Você já aplica boas práticas, mas pode melhorar.";
+    dicas = `
+      • Adote irrigação eficiente<br>
+      • Faça rotação de culturas<br>
+      • Reduza desperdícios
+    `;
   }
   else{
+    titulo = "Atenção ⚠️";
+    ranking = "🌱 Produtor Iniciante";
     cor = "#d62828";
-    titulo = "⚠️ Baixa Sustentabilidade";
+    texto = "Seu sistema precisa de melhorias sustentáveis.";
+    dicas = `
+      • Economize água<br>
+      • Proteja o solo<br>
+      • Use adubação orgânica
+    `;
   }
 
-  // 🔎 DIAGNÓSTICO INTELIGENTE
+  // DIAGNÓSTICO INTELIGENTE
   let problema = "";
   let motivo = "";
 
   if(agua == 3){
     problema = "uso excessivo de água";
-    motivo = "o consumo elevado pode gerar desperdício e escassez";
+    motivo = "isso pode causar desperdício e reduzir a disponibilidade futura";
   }
   else if(fert == 3){
-    problema = "uso intenso de fertilizantes químicos";
-    motivo = "isso pode degradar o solo e causar impactos ambientais";
+    problema = "uso intensivo de fertilizantes químicos";
+    motivo = "isso pode degradar o solo e afetar o meio ambiente";
   }
   else{
     problema = "equilíbrio sustentável";
-    motivo = "suas práticas estão alinhadas com a preservação ambiental";
+    motivo = "suas práticas estão alinhadas com a preservação";
   }
 
-  // 💡 MENSAGEM INTELIGENTE
-  msgInteligente.innerHTML = `
-    🔎 Seu principal ponto é <strong>${problema}</strong>, porque ${motivo}.
-  `;
+  msgInteligente.innerHTML =
+    `🔎 Seu principal ponto é <strong>${problema}</strong>, porque ${motivo}.`;
 
-  // 🧱 RESULTADO BASE
+  // RESULTADO COMPLETO
   resultado.innerHTML = `
   <div class="resultado-box">
 
@@ -156,14 +168,29 @@ document.getElementById("formCalc").addEventListener("submit", function(e){
         padding:10px;
         text-align:center;
         font-weight:bold;
-      ">
-      </div>
+      "></div>
+    </div>
+
+    <p><strong>Classificação:</strong> ${ranking}</p>
+
+    <br>
+
+    <h4>📌 Análise</h4>
+    <p>${texto}</p>
+
+    <br>
+
+    <button class="btn" onclick="abrirDicas()">Ver Plano Completo</button>
+
+    <div id="maisInfo" style="display:none; margin-top:15px;">
+      <h4>🌱 Plano Recomendado</h4>
+      <p>${dicas}</p>
     </div>
 
   </div>
   `;
 
-  // 🎬 ANIMAÇÃO DA BARRA
+  // ANIMAÇÃO
   let progresso = 0;
   const barra = document.getElementById("barra");
   const porcentagem = document.getElementById("porcentagem");
@@ -179,11 +206,8 @@ document.getElementById("formCalc").addEventListener("submit", function(e){
     }
   }, 15);
 
-  // 📜 SCROLL AUTOMÁTICO
-  resultado.scrollIntoView({
-    behavior: "smooth"
-  });
-
+  // SCROLL
+  resultado.scrollIntoView({ behavior: "smooth" });
 });
 /* ABRIR DICAS */
 function abrirDicas(){
