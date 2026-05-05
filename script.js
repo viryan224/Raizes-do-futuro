@@ -75,135 +75,115 @@ document.getElementById("formCalc").addEventListener("submit", function(e){
   const area = Number(document.getElementById("area").value);
   const agua = Number(document.getElementById("agua").value);
   const fert = Number(document.getElementById("fertilizante").value);
+
   const resultado = document.getElementById("resultado");
+  const erro = document.getElementById("mensagem-erro");
+  const msgInteligente = document.getElementById("mensagem-inteligente");
 
-  let pontos = 0;
+  erro.style.display = "none";
+  msgInteligente.innerHTML = "";
 
-  // CÁLCULO MAIS INTELIGENTE
-  pontos += (4 - agua) * 30; // menos água = melhor
-  pontos += (4 - fert) * 35; // mais orgânico = melhor
+  // ✅ VALIDAÇÃO
+  if(!area || area <= 0){
+    erro.style.display = "block";
+    erro.innerText = "⚠️ Informe uma área válida maior que zero.";
+    return;
+  }
 
-  // LIMITAR
+  if(!agua || !fert){
+    erro.style.display = "block";
+    erro.innerText = "⚠️ Preencha todos os campos corretamente.";
+    return;
+  }
+
+  // 🔢 CÁLCULO
+  let pontos = (4 - agua) * 30 + (4 - fert) * 35;
   if(pontos > 100) pontos = 100;
 
-  // CLASSIFICAÇÃO
-  let titulo, nivel, ranking, cor, impacto, recomendacao;
+  // 🎨 CLASSIFICAÇÃO
+  let cor, titulo;
 
   if(pontos >= 80){
-    titulo = "🌱 Sustentabilidade Elevada";
-    nivel = "ALTO";
-    ranking = "🌳 Guardião do Agro Sustentável";
     cor = "#2d6a4f";
-
-    impacto = `
-    Sua propriedade apresenta excelente equilíbrio ambiental.
-    Isso significa maior produtividade com menor impacto na natureza.
-    `;
-
-    recomendacao = `
-    • Invista em tecnologias de precisão<br>
-    • Amplie o uso de energia renovável<br>
-    • Continue com práticas sustentáveis
-    `;
+    titulo = "🌱 Sustentabilidade Elevada";
   }
-
   else if(pontos >= 50){
+    cor = "#e9c46a";
     titulo = "🌿 Sustentabilidade Moderada";
-    nivel = "MÉDIO";
-    ranking = "🌾 Produtor Consciente";
-    cor = "#95d5b2";
-
-    impacto = `
-    Você já aplica boas práticas, mas ainda há espaço para evolução.
-    Pequenas mudanças podem gerar grandes resultados.
-    `;
-
-    recomendacao = `
-    • Reduza o uso de água<br>
-    • Utilize mais fertilizantes orgânicos<br>
-    • Faça rotação de culturas
-    `;
   }
-
   else{
+    cor = "#d62828";
     titulo = "⚠️ Baixa Sustentabilidade";
-    nivel = "BAIXO";
-    ranking = "🌱 Produtor em Transição";
-    cor = "#d00000";
-
-    impacto = `
-    O sistema atual pode causar impactos negativos ao solo e ao meio ambiente.
-    Melhorias são necessárias para garantir produtividade futura.
-    `;
-
-    recomendacao = `
-    • Diminua o uso de químicos<br>
-    • Proteja o solo com cobertura vegetal<br>
-    • Adote irrigação eficiente
-    `;
   }
 
-  // IMPACTO REAL (diferencial)
-  let economiaAgua = (3 - agua) * 20;
-  let economiaCusto = (3 - fert) * 15;
+  // 🔎 DIAGNÓSTICO INTELIGENTE
+  let problema = "";
+  let motivo = "";
 
-  // RESULTADO FINAL (MAIS BONITO E FORTE)
+  if(agua == 3){
+    problema = "uso excessivo de água";
+    motivo = "o consumo elevado pode gerar desperdício e escassez";
+  }
+  else if(fert == 3){
+    problema = "uso intenso de fertilizantes químicos";
+    motivo = "isso pode degradar o solo e causar impactos ambientais";
+  }
+  else{
+    problema = "equilíbrio sustentável";
+    motivo = "suas práticas estão alinhadas com a preservação ambiental";
+  }
+
+  // 💡 MENSAGEM INTELIGENTE
+  msgInteligente.innerHTML = `
+    🔎 Seu principal ponto é <strong>${problema}</strong>, porque ${motivo}.
+  `;
+
+  // 🧱 RESULTADO BASE
   resultado.innerHTML = `
   <div class="resultado-box">
 
-    <h2 style="color:${cor}; margin-bottom:10px;">${titulo}</h2>
+    <h2 style="color:${cor};">${titulo}</h2>
 
-    <p><strong>Área analisada:</strong> ${area} hectares</p>
+    <p><strong>Área:</strong> ${area} hectares</p>
 
-    <p><strong>Índice de Sustentabilidade:</strong> ${pontos}%</p>
+    <p><strong>Índice Sustentável:</strong> <span id="porcentagem">0</span>%</p>
 
     <div style="background:#ddd;border-radius:20px;overflow:hidden;margin:15px 0;">
-      <div style="
-        width:${pontos}%;
+      <div id="barra" style="
+        width:0%;
         background:${cor};
         color:white;
         padding:10px;
-        font-weight:bold;
         text-align:center;
+        font-weight:bold;
       ">
-        ${pontos}%
       </div>
-    </div>
-
-    <p><strong>Classificação:</strong> ${ranking}</p>
-
-    <br>
-
-    <h4>🌎 Impacto na Propriedade</h4>
-    <p>${impacto}</p>
-
-    <br>
-
-    <h4>📊 Estimativa de Ganhos</h4>
-    <p>
-      💧 Economia de água: até ${economiaAgua > 0 ? economiaAgua : 0}%<br>
-      💰 Redução de custos: até ${economiaCusto > 0 ? economiaCusto : 0}%
-    </p>
-
-    <br>
-
-    <h4>🚀 Recomendações Inteligentes</h4>
-    <p>${recomendacao}</p>
-
-    <br>
-
-    <button class="btn" onclick="abrirDicas()">Ver Plano Completo</button>
-<div id="maisInfo" style="display:none;">
-    
-      <h4>🌱 Plano de Evolução Sustentável</h4>
-      <p>
-        A adoção gradual de práticas sustentáveis melhora a produtividade,
-        reduz custos e preserva o meio ambiente a longo prazo.
-      </p>
     </div>
 
   </div>
   `;
+
+  // 🎬 ANIMAÇÃO DA BARRA
+  let progresso = 0;
+  const barra = document.getElementById("barra");
+  const porcentagem = document.getElementById("porcentagem");
+
+  const animar = setInterval(() => {
+    if(progresso >= pontos){
+      clearInterval(animar);
+    } else{
+      progresso++;
+      barra.style.width = progresso + "%";
+      barra.innerText = progresso + "%";
+      porcentagem.innerText = progresso;
+    }
+  }, 15);
+
+  // 📜 SCROLL AUTOMÁTICO
+  resultado.scrollIntoView({
+    behavior: "smooth"
+  });
+
 });
 /* ABRIR DICAS */
 function abrirDicas(){
