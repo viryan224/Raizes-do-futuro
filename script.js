@@ -35,17 +35,36 @@ tema.addEventListener("click", () => {
 /* ANTES */
 function mostrarAntes(){
   document.getElementById("imgSolo").src = "antes.jpg";
-  document.getElementById("tituloSolo").innerText = "Solo Degradado";
+
+  document.getElementById("tituloSolo").innerText = "Modelo Convencional";
+
   document.getElementById("descSolo").innerText =
-  "Uso excessivo de químicos, erosão e monocultura reduzem a fertilidade da terra.";
+    "O modelo tradicional prioriza a produção imediata, muitas vezes sem planejamento sustentável, causando impactos negativos ao longo do tempo.";
+
+  document.getElementById("listaSolo").innerHTML =
+    "❌ Solo perde nutrientes com o tempo<br>" +
+    "❌ Uso excessivo de água<br>" +
+    "❌ Dependência de fertilizantes químicos<br>" +
+    "❌ Maior impacto ambiental<br>" +
+    "❌ Produção menos sustentável";
 }
 
 /* DEPOIS */
 function mostrarDepois(){
   document.getElementById("imgSolo").src = "depois.jpg";
-  document.getElementById("tituloSolo").innerText = "Solo Fértil e Sustentável";
+
+  document.getElementById("tituloSolo").innerText = "Modelo Sustentável";
+
   document.getElementById("descSolo").innerText =
-  "Rotação de culturas, irrigação correta e proteção vegetal aumentam a produtividade.";
+    "A agricultura sustentável busca equilibrar produção e preservação ambiental. 
+    Com técnicas adequadas, é possível aumentar a produtividade e conservar os recursos naturais.";
+
+  document.getElementById("listaSolo").innerHTML =
+    "✅ Solo mais fértil e produtivo<br>" +
+    "✅ Uso eficiente da água<br>" +
+    "✅ Redução de impactos ambientais<br>" +
+    "✅ Menor custo a longo prazo<br>" +
+    "✅ Produção sustentável e equilibrada";
 }
 
 /* CALCULADORA PREMIUM */
