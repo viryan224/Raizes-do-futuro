@@ -193,8 +193,8 @@ document.getElementById("formCalc").addEventListener("submit", function(e){
     <br>
 
     <button class="btn" onclick="abrirDicas()">Ver Plano Completo</button>
-
-    <div id="maisInfo" class="extra">
+<div id="maisInfo" style="display:none;">
+    
       <h4>🌱 Plano de Evolução Sustentável</h4>
       <p>
         A adoção gradual de práticas sustentáveis melhora a produtividade,
