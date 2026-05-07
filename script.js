@@ -39,14 +39,13 @@ function mostrarAntes(){
   document.getElementById("tituloSolo").innerText = "Modelo Convencional";
 
   document.getElementById("descSolo").innerText =
-    "O modelo tradicional prioriza a produção imediata, muitas vezes sem planejamento sustentável, causando impactos negativos ao longo do tempo.";
-
+"Práticas sem planejamento sustentável podem degradar o solo, aumentar desperdícios e reduzir a produtividade ao longo do tempo.";
+  
   document.getElementById("listaSolo").innerHTML =
-    "❌ Solo perde nutrientes com o tempo<br>" +
-    "❌ Uso excessivo de água<br>" +
-    "❌ Dependência de fertilizantes químicos<br>" +
-    "❌ Maior impacto ambiental<br>" +
-    "❌ Produção menos sustentável";
+"❌ Desgaste do solo<br>" +
+"❌ Alto consumo de água<br>" +
+"❌ Dependência química<br>" +
+"❌ Maior impacto ambiental";
 }
 
 /* DEPOIS */
