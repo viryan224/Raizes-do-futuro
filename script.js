@@ -106,7 +106,7 @@ else pontos += 5;
 // Garantir limite
 if(pontos > 100) pontos = 100;
 
-let titulo, ranking, cor, texto, dicas;
+let titulo, ranking, cor, texto, dicas, linkExtra;
 
 // Classificação
 if(pontos >= 80){
@@ -114,32 +114,55 @@ if(pontos >= 80){
   ranking = "🌳 Guardião da Terra";
   cor = "#2d6a4f";
   texto = "Sua produção demonstra alto equilíbrio ambiental.";
+
   dicas = `
     • Continue inovando<br>
     • Invista em energia limpa<br>
     • Amplie tecnologias rurais
   `;
+
+  linkExtra = `
+    <a href="https://www.embrapa.br/" target="_blank" class="btn pequeno">
+      🌱 Conheça tecnologias sustentáveis
+    </a>
+  `;
 }
+
 else if(pontos >= 50){
   titulo = "Bom Caminho 👍";
   ranking = "🌿 Produtor Consciente";
   cor = "#e9c46a";
   texto = "Você já aplica boas práticas, mas pode melhorar.";
+
   dicas = `
     • Adote irrigação eficiente<br>
     • Faça rotação de culturas<br>
     • Reduza desperdícios
   `;
+
+  linkExtra = `
+    <a href="https://youtu.be/uhKm3vcQcik?si=v3auQ9cBQJienrdt" target="_blank" class="btn pequeno">
+      💧 Ver técnicas sustentáveis
+    </a>
+  `;
 }
+
 else{
   titulo = "Atenção ⚠️";
   ranking = "🌱 Produtor Iniciante";
   cor = "#d62828";
   texto = "Seu sistema precisa de melhorias sustentáveis.";
+
   dicas = `
     • Economize água<br>
     • Proteja o solo<br>
     • Use adubação orgânica
+  `;
+
+  linkExtra = `
+    <a href="https://agrosmart.com.br/blog/agricultura-sustentavel/" target="_blank" class="btn pequeno">
+      📘 Aprender como melhorar
+    </a>
   `;
 }
 
