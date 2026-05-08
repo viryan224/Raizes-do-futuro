@@ -743,3 +743,90 @@ body.dark .card p{
   }
 
   }
+/* ===== SEÇÕES PREMIUM ===== */
+
+.section{
+  position:relative;
+  padding:90px 0;
+}
+
+/* TÍTULOS */
+.titulo{
+  position:relative;
+
+  margin-bottom:25px;
+
+  font-size:2.2rem;
+  font-weight:800;
+
+  color:var(--verde2);
+}
+
+/* LINHA DECORATIVA */
+.titulo::after{
+  content:"";
+
+  display:block;
+
+  width:80px;
+  height:5px;
+
+  margin:15px auto 0;
+
+  border-radius:20px;
+
+  background:linear-gradient(
+    90deg,
+    #2d6a4f,
+    #52b788
+  );
+}
+
+/* TEXTO CENTRAL */
+.section p{
+  line-height:1.8;
+}
+
+/* ÁREAS VERDES */
+.verde{
+  position:relative;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2d6a4f,
+      #1b4332
+    );
+}
+
+/* EFEITO SUAVE ENTRE SEÇÕES */
+.section::before{
+  content:"";
+
+  position:absolute;
+  top:0;
+  left:0;
+
+  width:100%;
+  height:1px;
+
+  background:rgba(255,255,255,0.05);
+}
+
+/* TÍTULOS BRANCOS */
+.verde .titulo{
+  color:white;
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+
+  .section{
+    padding:70px 0;
+  }
+
+  .titulo{
+    font-size:1.8rem;
+  }
+
+  }
