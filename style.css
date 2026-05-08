@@ -830,3 +830,77 @@ body.dark .card p{
   }
 
   }
+/* ===== BOTÕES PREMIUM ===== */
+
+.btn{
+  position:relative;
+
+  overflow:hidden;
+
+  border:none;
+
+  font-weight:700;
+  letter-spacing:.3px;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    background .25s ease;
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* HOVER */
+.btn:hover{
+  transform:translateY(-4px);
+
+  box-shadow:
+    0 14px 28px rgba(0,0,0,0.18);
+}
+
+/* CLIQUE */
+.btn:active{
+  transform:scale(.97);
+}
+
+/* BRILHO ANIMADO */
+.btn::before{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:-120%;
+
+  width:80%;
+  height:100%;
+
+  transform:skewX(-25deg);
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      rgba(255,255,255,0.28),
+      transparent
+    );
+
+  transition:.7s;
+}
+
+.btn:hover::before{
+  left:140%;
+}
+
+/* BOTÕES PEQUENOS */
+.pequeno{
+  padding:10px 16px;
+  font-size:.95rem;
+}
+
+/* DARK MODE */
+body.dark .btn{
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.35);
+  }
