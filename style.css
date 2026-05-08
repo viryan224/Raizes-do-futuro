@@ -652,3 +652,94 @@ body.dark .card h3{
 body.dark .card p{
   color:#e0e0e0;
 }
+/* ===== HERO PREMIUM ===== */
+
+.hero{
+  position:relative;
+  overflow:hidden;
+}
+
+/* ESCURECIMENTO MAIS PROFISSIONAL */
+.overlay{
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.45)
+    );
+}
+
+/* CAIXA CENTRAL */
+.hero-box{
+  background:rgba(0,0,0,0.18);
+
+  padding:40px;
+
+  border-radius:25px;
+
+  backdrop-filter:blur(6px);
+
+  box-shadow:
+    0 10px 40px rgba(0,0,0,0.25);
+
+  animation:heroEntrada 1s ease;
+}
+
+/* TÍTULO MAIS IMPACTANTE */
+.hero-box h1{
+  font-size:3.2rem;
+  line-height:1.1;
+  margin-bottom:20px;
+
+  text-shadow:
+    0 4px 12px rgba(0,0,0,0.35);
+}
+
+/* TEXTO */
+.hero-box p{
+  font-size:1.05rem;
+  line-height:1.8;
+}
+
+/* INPUT MAIS BONITO */
+.hero-form input{
+  background:rgba(255,255,255,0.95);
+
+  box-shadow:
+    0 5px 15px rgba(0,0,0,0.12);
+}
+
+/* BOTÃO HERO */
+.hero .btn{
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ANIMAÇÃO */
+@keyframes heroEntrada{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+
+  .hero-box{
+    padding:30px 20px;
+  }
+
+  .hero-box h1{
+    font-size:2.2rem;
+  }
+
+  .hero-box p{
+    font-size:1rem;
+  }
+
+  }
