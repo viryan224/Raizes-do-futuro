@@ -219,9 +219,14 @@ else{
     <button class="btn" onclick="abrirDicas()">Ver Plano Completo</button>
 
     <div id="maisInfo" style="display:none; margin-top:15px;">
-      <h4>🌱 Plano Recomendado</h4>
-      <p>${dicas}</p>
-    </div>
+  <h4>🌱 Plano Recomendado</h4>
+
+  <p>${dicas}</p>
+
+  <br>
+
+  ${linkExtra}
+</div>
 
   </div>
   `;
