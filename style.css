@@ -904,3 +904,122 @@ body.dark .btn{
   box-shadow:
     0 10px 25px rgba(0,0,0,0.35);
   }
+/* ================================= */
+/* DARK MODE PREMIUM FINAL FIX */
+/* ================================= */
+
+body.dark{
+  background:#0f1411;
+  color:#f5f5f5;
+}
+
+/* HEADER */
+body.dark .header{
+  background:rgba(15,20,17,0.92);
+  border-bottom:1px solid rgba(255,255,255,0.04);
+}
+
+/* LINKS MENU */
+body.dark .nav a{
+  color:#f1f1f1;
+}
+
+body.dark .nav a:hover{
+  background:rgba(116,198,157,0.12);
+  color:#95d5b2;
+}
+
+/* HERO */
+body.dark .hero-box{
+  background:rgba(0,0,0,0.28);
+}
+
+/* CARDS */
+body.dark .card{
+  background:#1a221d;
+
+  border:1px solid rgba(255,255,255,0.05);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.35);
+}
+
+body.dark .card h3{
+  color:#95d5b2;
+}
+
+body.dark .card p{
+  color:#dddddd;
+}
+
+/* FORMULÁRIOS */
+body.dark .formulario,
+body.dark .resultado-box,
+body.dark .texto-comparacao{
+  background:#1a221d;
+
+  color:white;
+
+  border:1px solid rgba(255,255,255,0.05);
+}
+
+/* INPUTS */
+body.dark input,
+body.dark textarea,
+body.dark select{
+  background:#111814;
+
+  color:white;
+
+  border:1px solid rgba(255,255,255,0.06);
+}
+
+/* PLACEHOLDER */
+body.dark input::placeholder,
+body.dark textarea::placeholder{
+  color:#aaaaaa;
+}
+
+/* COMPARAÇÃO */
+body.dark .comparacao{
+  background:#141a16;
+}
+
+/* TEXTOS */
+body.dark .texto-comparacao p{
+  color:#dddddd;
+}
+
+body.dark .texto-comparacao h3{
+  color:#95d5b2;
+}
+
+/* RESULTADO */
+body.dark .resultado-box{
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* FOOTER */
+body.dark .footer{
+  background:#0b0f0d;
+}
+
+/* BOTÃO TOPO */
+body.dark #btnTopo{
+  background:#40916c;
+}
+
+/* SCROLLBAR */
+body.dark::-webkit-scrollbar{
+  width:10px;
+}
+
+body.dark::-webkit-scrollbar-track{
+  background:#111814;
+}
+
+body.dark::-webkit-scrollbar-thumb{
+  background:#2d6a4f;
+  border-radius:20px;
+}
