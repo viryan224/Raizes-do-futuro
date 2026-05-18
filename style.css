@@ -1023,3 +1023,27 @@ body.dark::-webkit-scrollbar-thumb{
   background:#2d6a4f;
   border-radius:20px;
 }
+/* ===== FOTO EDUCAÇÃO ===== */
+
+.imagem-educacao{
+  margin:40px 0;
+}
+
+.imagem-educacao img{
+  width:100%;
+
+  max-height:420px;
+
+  object-fit:cover;
+
+  border-radius:20px;
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* DARK MODE */
+body.dark .imagem-educacao img{
+  box-shadow:
+    0 12px 30px rgba(0,0,0,0.4);
+}
