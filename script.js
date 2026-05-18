@@ -49,24 +49,16 @@ function mostrarAntes(){
   "❌ Desgaste do solo<br>" +
   "❌ Alto consumo de água<br>" +
   "❌ Dependência química<br>" +
-  "❌ Maior impacto ambiental<br><br>" +
+  "❌ Maior impacto ambiental";
 
-  `<div class="saiba-links">
+  /* LINKS */
+  document.getElementById("linkArtigo").href =
+  "https://copasul.agr.br/noticias/video-palestra-7-principios-da-agricultura-sustentavel-por-laercio-dalla-vecchia/1468";
 
-    <a href="https://copasul.agr.br/noticias/video-palestra-7-principios-da-agricultura-sustentavel-por-laercio-dalla-vecchia/1468?utm_source=chatgpt.com"
-    target="_blank"
-    class="btn pequeno">
-    📘 Artigo
-    </a>
-
-    <a href="https://www.tce.sp.gov.br/sala-imprensa/videos/ods-2-fome-zero-e-agricultura-sustentavel-observatorio-futuro-tcesp?utm_source=chatgpt.com"
-    target="_blank"
-    class="btn pequeno">
-    🎥 Vídeo
-    </a>
-
-  </div>`;
+  document.getElementById("linkVideo").href =
+  "https://www.tce.sp.gov.br/sala-imprensa/videos/ods-2-fome-zero-e-agricultura-sustentavel-observatorio-futuro-tcesp";
 }
+
 
 /* DEPOIS */
 function mostrarDepois(){
@@ -84,23 +76,14 @@ function mostrarDepois(){
   "✅ Solo mais fértil<br>" +
   "✅ Uso eficiente da água<br>" +
   "✅ Redução de impactos<br>" +
-  "✅ Produção sustentável<br><br>" +
+  "✅ Produção sustentável";
 
-  `<div class="saiba-links">
+  /* LINKS */
+  document.getElementById("linkArtigo").href =
+  "https://www.bosch.com.br/noticias-e-historias/agronegocio/agricultura-sustentavel/";
 
-    <a href="https://www.bosch.com.br/noticias-e-historias/agronegocio/agricultura-sustentavel/?utm_source=chatgpt.com"
-    target="_blank"
-    class="btn pequeno">
-    📘 Artigo
-    </a>
-
-    <a href="https://www.youtube.com/watch?v=i7_tbsV6N84&utm_source=chatgpt.com"
-    target="_blank"
-    class="btn pequeno">
-    🎥 Vídeo
-    </a>
-
-  </div>`;
+  document.getElementById("linkVideo").href =
+  "https://www.youtube.com/watch?v=i7_tbsV6N84";
 }
 /* CALCULADORA PREMIUM */
 
