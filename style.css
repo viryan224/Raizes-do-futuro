@@ -1084,6 +1084,35 @@ body.dark .imagem-dicas img{
   padding:10px 16px;
   font-size:0.95rem;
 }
+/* ===== CORREÇÃO FINAL DARK MODE CONTATO ===== */
+
+body.dark #contato .formulario{
+  background:#1b1f1c !important;
+}
+
+body.dark #contato input,
+body.dark #contato textarea{
+  background:#2a2f2b !important;
+  color:#ffffff !important;
+
+  border:1px solid #3d4a42 !important;
+}
+
+body.dark #contato input::placeholder,
+body.dark #contato textarea::placeholder{
+  color:#bfc7c1 !important;
+}
+
+body.dark #contato input:focus,
+body.dark #contato textarea:focus{
+  outline:none;
+
+  border:1px solid #52b788 !important;
+
+  box-shadow:
+    0 0 0 3px rgba(82,183,136,0.2);
+}
+
 /* ===== FUNDO DO FORMULÁRIO NO DARK MODE ===== */
 
 body.dark #contato .formulario{
