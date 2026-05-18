@@ -32,72 +32,76 @@ tema.addEventListener("click", () => {
   }
 });
 
+
 /* ANTES */
 function mostrarAntes(){
+
   document.getElementById("imgSolo").src = "antes.jpg";
 
-  document.getElementById("tituloSolo").innerText = "Modelo Convencional";
+  document.getElementById("tituloSolo").innerText =
+  "Modelo Convencional";
 
   document.getElementById("descSolo").innerText =
-"Práticas sem planejamento sustentável podem degradar o solo, aumentar desperdícios e reduzir a produtividade ao longo do tempo.";
-  
+  "Práticas sem planejamento sustentável podem degradar o solo, aumentar desperdícios e reduzir a produtividade ao longo do tempo.";
+
   document.getElementById("listaSolo").innerHTML =
-"❌ Desgaste do solo<br>" +
-"❌ Alto consumo de água<br>" +
-"❌ Dependência química<br>" +
-"❌ Maior impacto ambiental";
+
+  "❌ Desgaste do solo<br>" +
+  "❌ Alto consumo de água<br>" +
+  "❌ Dependência química<br>" +
+  "❌ Maior impacto ambiental<br><br>" +
+
+  `<div class="saiba-links">
+
+    <a href="https://copasul.agr.br/noticias/video-palestra-7-principios-da-agricultura-sustentavel-por-laercio-dalla-vecchia/1468?utm_source=chatgpt.com"
+    target="_blank"
+    class="btn pequeno">
+    📘 Artigo
+    </a>
+
+    <a href="https://www.tce.sp.gov.br/sala-imprensa/videos/ods-2-fome-zero-e-agricultura-sustentavel-observatorio-futuro-tcesp?utm_source=chatgpt.com"
+    target="_blank"
+    class="btn pequeno">
+    🎥 Vídeo
+    </a>
+
+  </div>`;
 }
-<br><br>
-
-<div class="saiba-links">
-
-<a href="https://copasul.agr.br/noticias/video-palestra-7-principios-da-agricultura-sustentavel-por-laercio-dalla-vecchia/1468?utm_source=chatgpt.com"
-target="_blank"
-class="btn pequeno">
-📘 Artigo
-</a>
-
-<a href="https://www.tce.sp.gov.br/sala-imprensa/videos/ods-2-fome-zero-e-agricultura-sustentavel-observatorio-futuro-tcesp?utm_source=chatgpt.com"
-target="_blank"
-class="btn pequeno">
-🎥 Vídeo
-</a>
-
-</div>
 
 /* DEPOIS */
 function mostrarDepois(){
+
   document.getElementById("imgSolo").src = "depois.jpg";
 
-  document.getElementById("tituloSolo").innerText = "Modelo Sustentável";
+  document.getElementById("tituloSolo").innerText =
+  "Modelo Sustentável";
 
   document.getElementById("descSolo").innerText =
-"Técnicas sustentáveis aumentam a produtividade, preservam recursos naturais e fortalecem a agricultura no longo prazo.";
-  
+  "Técnicas sustentáveis aumentam a produtividade, preservam recursos naturais e fortalecem a agricultura no longo prazo.";
+
   document.getElementById("listaSolo").innerHTML =
-"✅ Solo mais fértil<br>" +
-"✅ Uso eficiente da água<br>" +
-"✅ Redução de impactos<br>" +
-"✅ Produção sustentável";
+
+  "✅ Solo mais fértil<br>" +
+  "✅ Uso eficiente da água<br>" +
+  "✅ Redução de impactos<br>" +
+  "✅ Produção sustentável<br><br>" +
+
+  `<div class="saiba-links">
+
+    <a href="https://www.bosch.com.br/noticias-e-historias/agronegocio/agricultura-sustentavel/?utm_source=chatgpt.com"
+    target="_blank"
+    class="btn pequeno">
+    📘 Artigo
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=i7_tbsV6N84&utm_source=chatgpt.com"
+    target="_blank"
+    class="btn pequeno">
+    🎥 Vídeo
+    </a>
+
+  </div>`;
 }
-<br><br>
-
-<div class="saiba-links">
-
-<a href="https://www.bosch.com.br/noticias-e-historias/agronegocio/agricultura-sustentavel/?utm_source=chatgpt.com"
-target="_blank"
-class="btn pequeno">
-📘 Artigo
-</a>
-
-<a href="https://www.youtube.com/watch?v=i7_tbsV6N84&utm_source=chatgpt.com"
-target="_blank"
-class="btn pequeno">
-🎥 Vídeo
-</a>
-
-</div>
-
 /* CALCULADORA PREMIUM */
 
 document.getElementById("formCalc").addEventListener("submit", function(e){
