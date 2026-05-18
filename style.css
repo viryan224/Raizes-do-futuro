@@ -1047,3 +1047,27 @@ body.dark .imagem-educacao img{
   box-shadow:
     0 12px 30px rgba(0,0,0,0.4);
 }
+/* ===== FOTO DICAS ===== */
+
+.imagem-dicas{
+  margin:40px 0;
+}
+
+.imagem-dicas img{
+  width:100%;
+
+  max-height:420px;
+
+  object-fit:cover;
+
+  border-radius:20px;
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* DARK MODE */
+body.dark .imagem-dicas img{
+  box-shadow:
+    0 12px 30px rgba(0,0,0,0.4);
+}
