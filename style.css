@@ -1071,3 +1071,16 @@ body.dark .imagem-dicas img{
   box-shadow:
     0 12px 30px rgba(0,0,0,0.4);
 }
+/* ===== LINKS SAIBA MAIS ===== */
+
+.saiba-links{
+  display:flex;
+  gap:12px;
+  margin-top:20px;
+  flex-wrap:wrap;
+}
+
+.saiba-links .btn{
+  padding:10px 16px;
+  font-size:0.95rem;
+}
