@@ -310,3 +310,69 @@ document.getElementById("formContato").addEventListener("submit", function(e){
 
   this.reset();
 });
+/* ========================= */
+/* ACESSIBILIDADE */
+/* ========================= */
+
+let tamanhoFonte = 100;
+
+/* AUMENTAR FONTE */
+
+document
+.getElementById("aumentarFonte")
+.addEventListener("click", () => {
+
+  tamanhoFonte += 10;
+
+  document.documentElement.style.fontSize =
+  tamanhoFonte + "%";
+
+});
+
+/* DIMINUIR FONTE */
+
+document
+.getElementById("diminuirFonte")
+.addEventListener("click", () => {
+
+  tamanhoFonte -= 10;
+
+  document.documentElement.style.fontSize =
+  tamanhoFonte + "%";
+
+});
+
+/* MODO ESCURO */
+
+const botaoModo =
+document.getElementById("modoEscuro");
+
+botaoModo.addEventListener("click", () => {
+
+  document.body.classList.toggle("dark");
+
+});
+
+/* LEITURA */
+
+const botaoLer =
+document.getElementById("lerPagina");
+
+const botaoParar =
+document.getElementById("pararLeitura");
+
+botaoLer.addEventListener("click", () => {
+
+  const texto =
+  document.body.innerText;
+
+  const fala =
+  new SpeechSynthesisUtterance(texto);
+
+  fala.lang = "pt-BR";
+
+  speechSynthesis.speak(fala);
+
+});
+
+/* PARAR LEITURA
