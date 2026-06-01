@@ -1171,3 +1171,16 @@ textarea,
 select{
   font-size: inherit;
 }
+.hero-box{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+.hero-box h1{
+  display:block;
+  width:100%;
+  text-align:center;
+  margin:0 auto 20px auto;
+}
