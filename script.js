@@ -342,16 +342,6 @@ document
 
 });
 
-/* MODO ESCURO */
-
-const botaoModo =
-document.getElementById("modoEscuro");
-
-botaoModo.addEventListener("click", () => {
-
-  document.body.classList.toggle("dark");
-
-});
 
 /* LEITURA */
 
