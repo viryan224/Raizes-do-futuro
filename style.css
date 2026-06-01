@@ -1164,3 +1164,10 @@ body.dark #contato .formulario{
   transform:scale(1.08);
   background:#40916c;
 }
+button,
+a,
+input,
+textarea,
+select{
+  font-size: inherit;
+}
