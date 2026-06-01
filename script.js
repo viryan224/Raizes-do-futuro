@@ -36,7 +36,7 @@ tema.addEventListener("click", () => {
 /* ANTES */
 function mostrarAntes(){
 
-  document.getElementById("imgSolo").src = "antes.jpg";
+  document.getElementById("imgSolo").src = "Imagens/antes.jpg";
 
   document.getElementById("tituloSolo").innerText =
   "Modelo Convencional";
@@ -63,7 +63,7 @@ function mostrarAntes(){
 /* DEPOIS */
 function mostrarDepois(){
 
-  document.getElementById("imgSolo").src = "depois.jpg";
+  document.getElementById("imgSolo").src = "Imagens/depois.jpg";
 
   document.getElementById("tituloSolo").innerText =
   "Modelo Sustentável";
