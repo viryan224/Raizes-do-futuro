@@ -316,53 +316,78 @@ document.getElementById("formContato").addEventListener("submit", function(e){
 
 let tamanhoFonte = 100;
 
-/* AUMENTAR FONTE */
+/* BOTÃO A+ */
 
-document
-.getElementById("aumentarFonte")
-.addEventListener("click", () => {
+const aumentar =
+document.getElementById("aumentarFonte");
 
-  tamanhoFonte += 10;
+if(aumentar){
 
-  document.documentElement.style.fontSize =
-  tamanhoFonte + "%";
+  aumentar.addEventListener("click", () => {
 
-});
+    tamanhoFonte += 10;
 
-/* DIMINUIR FONTE */
+    document.documentElement.style.fontSize =
+    tamanhoFonte + "%";
 
-document
-.getElementById("diminuirFonte")
-.addEventListener("click", () => {
+  });
 
-  tamanhoFonte -= 10;
+}
 
-  document.documentElement.style.fontSize =
-  tamanhoFonte + "%";
+/* BOTÃO A- */
 
-});
+const diminuir =
+document.getElementById("diminuirFonte");
 
+if(diminuir){
+
+  diminuir.addEventListener("click", () => {
+
+    tamanhoFonte -= 10;
+
+    document.documentElement.style.fontSize =
+    tamanhoFonte + "%";
+
+  });
+
+}
 
 /* LEITURA */
 
-const botaoLer =
+const ler =
 document.getElementById("lerPagina");
 
-const botaoParar =
+if(ler){
+
+  ler.addEventListener("click", () => {
+
+    speechSynthesis.cancel();
+
+    const texto =
+    document.body.innerText;
+
+    const fala =
+    new SpeechSynthesisUtterance(texto);
+
+    fala.lang = "pt-BR";
+
+    window.speechSynthesis.speak(fala);
+
+  });
+
+}
+
+/* PARAR */
+
+const parar =
 document.getElementById("pararLeitura");
 
-botaoLer.addEventListener("click", () => {
+if(parar){
 
-  const texto =
-  document.body.innerText;
+  parar.addEventListener("click", () => {
 
-  const fala =
-  new SpeechSynthesisUtterance(texto);
+    speechSynthesis.cancel();
 
-  fala.lang = "pt-BR";
+  });
 
-  speechSynthesis.speak(fala);
-
-});
-
-/* PARAR LEITURA
+}
