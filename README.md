@@ -1,141 +1,49 @@
-# 🌾 AgroForte — Futuro Sustentável
+🌾 AgroForte – Futuro Sustentável
 
-Projeto desenvolvido para o **Concurso Agrinho 2026**, com foco na conscientização sobre sustentabilidade no campo, preservação ambiental e uso inteligente dos recursos naturais através da tecnologia.
+Sobre o Projeto
 
----
+O AgroForte – Futuro Sustentável foi desenvolvido para o Concurso Agrinho 2026 com o objetivo de conscientizar a população sobre a importância da agricultura sustentável para o desenvolvimento econômico, social e ambiental do Brasil.
 
-# 📌 Sobre o Projeto
+O site apresenta conteúdos educativos, comparações entre práticas agrícolas convencionais e sustentáveis, uma calculadora interativa de impacto ambiental, dicas para produtores rurais e materiais complementares para aprofundamento do tema.
 
-O **AgroForte** é um site educativo e interativo criado com o objetivo de demonstrar como a agricultura moderna pode unir:
+Objetivos
 
-- produtividade agrícola
-- preservação ambiental
-- inovação tecnológica
-- uso consciente dos recursos naturais
+- Promover a educação ambiental.
+- Demonstrar a importância do agronegócio para o Brasil.
+- Incentivar práticas agrícolas sustentáveis.
+- Apresentar tecnologias que contribuem para a preservação dos recursos naturais.
+- Estimular a reflexão sobre a produção de alimentos e a conservação do meio ambiente.
 
-O projeto busca incentivar práticas sustentáveis no campo de forma acessível, visual e interativa.
+Funcionalidades
 
----
+- 🌱 Conteúdo educativo sobre sustentabilidade no campo.
+- 📊 Calculadora de impacto ambiental.
+- 🌾 Comparação entre modelos agrícolas convencionais e sustentáveis.
+- 📚 Links para artigos e vídeos educativos.
+- 🌙 Modo escuro.
+- ♿ Recursos de acessibilidade.
+- 📱 Layout responsivo para dispositivos móveis.
 
-# 🌱 Tema
+Tecnologias Utilizadas
 
-### **Agro Forte, Futuro Sustentável**
+- HTML5
+- CSS3
+- JavaScript
 
-A proposta do projeto é mostrar que produzir alimentos e preservar o meio ambiente podem caminhar juntos através da conscientização, tecnologia e planejamento sustentável.
+Imagens
 
----
+Parte das imagens utilizadas no projeto foram produzidas pelo próprio autor durante visitas e registros relacionados ao meio rural.
 
-# 🎯 Objetivos do Site
+Outras imagens foram utilizadas exclusivamente para fins educacionais e ilustrativos, respeitando os princípios de uso acadêmico do projeto.
 
-- Incentivar práticas agrícolas sustentáveis
-- Promover educação ambiental
-- Demonstrar impactos positivos e negativos no campo
-- Apresentar soluções tecnológicas aplicadas à agricultura
-- Estimular o uso consciente de água, solo e fertilizantes
-- Utilizar tecnologia para ensinar sustentabilidade de forma interativa
+Autor
 
----
+Ryan Emanuel Vieira Martins
 
-# 💻 Funcionalidades
+Concurso
 
-## ✅ Área Educativa
-Explicações sobre:
-- agricultura sustentável
-- conservação do solo
-- uso consciente da água
-- fertilizantes
-- tecnologia no campo
+Projeto desenvolvido para participação no Concurso Agrinho 2026.
 
----
+Observação
 
-## ✅ Comparação Visual
-Sistema interativo de comparação entre:
-
-- modelo agrícola tradicional
-- modelo sustentável
-
-Demonstrando diferenças ambientais e produtivas.
-
----
-
-## ✅ Calculadora de Impacto Sustentável
-Ferramenta interativa que:
-- analisa práticas agrícolas
-- calcula índice sustentável
-- gera classificação ambiental
-- apresenta recomendações inteligentes
-- mostra plano de melhorias
-
----
-
-## ✅ Recursos Visuais
-- layout responsivo
-- animações suaves
-- cards interativos
-- barra de progresso animada
-- modo escuro
-- navegação intuitiva
-
----
-
-# 🛠️ Tecnologias Utilizadas
-
-- **HTML5**
-- **CSS3**
-- **JavaScript**
-
-Todo o projeto foi desenvolvido sem frameworks externos, utilizando apenas tecnologias web puras.
-
----
-
-# 📚 Conhecimentos Aplicados
-
-Durante o desenvolvimento do projeto foram utilizados conhecimentos relacionados a:
-
-- desenvolvimento web
-- design responsivo
-- interatividade com JavaScript
-- experiência do usuário (UX)
-- organização visual
-- educação ambiental
-- sustentabilidade no agronegócio
-
----
-
-# 🌍 Importância do Projeto
-
-A agricultura possui papel fundamental na sociedade, porém o uso inadequado dos recursos naturais pode gerar impactos ambientais significativos.
-
-O AgroForte busca demonstrar que:
-- tecnologia e sustentabilidade podem trabalhar juntas
-- pequenas mudanças geram grandes resultados
-- o futuro da produção agrícola depende da preservação ambiental
-
----
-
-# 🖼️ Créditos das Imagens
-
-As imagens utilizadas possuem caráter ilustrativo e educacional.
-
-### Solo degradado
-Big Tires  
-https://www.bigtires.com.br/blog/post/6-dicas-para-recuperar-uma-area-com-o-solo-degradado
-
-### Agricultura sustentável
-Agrosmart  
-https://agrosmart.com.br/blog/agricultura-sustentavel/
-
----
-
-# 👤 Autor
-
-### Ryan Emanuel Vieira Martins
-
-Projeto desenvolvido para fins educativos no Concurso Agrinho 2026.
-
----
-
-# 🌱 Mensagem Final
-
-> Produzir alimentos e preservar a natureza não são objetivos opostos.  
-> Com conscientização, planejamento e tecnologia, é possível construir um futuro mais sustentável para todos.
+Este projeto possui finalidade exclusivamente educativa e busca contribuir para a conscientização sobre a importância da sustentabilidade na agricultura e da preservação dos recursos naturais para as futuras gerações.
