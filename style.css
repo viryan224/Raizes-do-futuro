@@ -293,7 +293,7 @@ body.dark .header{
   display:none;
 }
 
-/* ===== DARK MODE COMPLETO ===== */
+/* ===== DARK MODE COMPLETO- MODO ESCURO ===== */
 body.dark{
   background:#101512;
   color:#f1f1f1;
@@ -322,7 +322,7 @@ body.dark .header{
   background:rgba(24,32,28,0.95);
 }
 
-/* RESPONSIVO */
+/* RESPONSIVO- TAMANHO DA TELA */
 @media(max-width:900px){
 
   .nav-area{
@@ -420,7 +420,7 @@ body.dark .header{
 }
 
 /* ========================= */
-/* DARK MODE CORRETO */
+/* DARK MODE CORRETO-MODO ESCURO */
 /* ========================= */
 
 body.dark .verde {
