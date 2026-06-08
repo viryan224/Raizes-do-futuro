@@ -360,9 +360,9 @@ body.dark .header{
   }
     }
 
-/* ========================= */
+
 /* CORREÇÃO SEÇÃO VERDE */
-/* ========================= */
+
 
 .verde {
   color: white;
@@ -374,9 +374,9 @@ body.dark .header{
   color: white;
 }
 
-/* ========================= */
+
 /* ANTES / DEPOIS MELHORADO */
-/* ========================= */
+
 
 .comparacao {
   background: rgba(255,255,255,0.95);
@@ -400,9 +400,9 @@ body.dark .header{
   color: #333;
 }
 
-/* ========================= */
+
 /* FORM CONTATO CORRIGIDO */
-/* ========================= */
+
 
 #contato .formulario {
   background: white;
@@ -419,9 +419,8 @@ body.dark .header{
   color: #666;
 }
 
-/* ========================= */
 /* DARK MODE CORRETO-MODO ESCURO */
-/* ========================= */
+
 
 body.dark .verde {
   color: white;
@@ -904,9 +903,9 @@ body.dark .btn{
   box-shadow:
     0 10px 25px rgba(0,0,0,0.35);
   }
-/* ================================= */
+
 /* DARK MODE PREMIUM FINAL FIX */
-/* ================================= */
+
 
 body.dark{
   background:#0f1411;
@@ -1124,9 +1123,9 @@ body.dark #contato .formulario{
     0 10px 30px rgba(0,0,0,0.35);
 }
 
-/* ========================= */
+
 /* ACESSIBILIDADE */
-/* ========================= */
+
 
 .acessibilidade{
   position:fixed;
