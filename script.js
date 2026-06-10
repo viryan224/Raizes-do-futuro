@@ -358,16 +358,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const ler = document.getElementById("lerPagina");
   const parar = document.getElementById("pararLeitura");
+  const main = document.getElementById("conteudoPrincipal");
+
+  if (!main) return;
+
   let synth = window.speechSynthesis;
   let falando = false;
   let indexParagrafo = 0;
-  let parrafos = [];
-  let falaAtual;
+  let parrafos = Array.from(main.querySelectorAll("p")).filter(p => p.innerText.trim() !== "");
+  let falaAtual = null;
 
+  // Função para limpar destaque
   function resetarDestaque() {
-    parrafos.forEach(p => p.style.background = "");
+    parrafos.forEach(p => p.classList.remove("destaque"));
   }
 
+  // Lê o parágrafo atual
   function lerParagrafo() {
     if (indexParagrafo >= parrafos.length) {
       falando = false;
@@ -378,45 +384,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const p = parrafos[indexParagrafo];
     resetarDestaque();
-    p.style.background = "rgba(255, 255, 0, 0.3)"; // destaque amarelo suave
+    p.classList.add("destaque");
 
     falaAtual = new SpeechSynthesisUtterance(p.innerText);
     falaAtual.lang = "pt-BR";
     falaAtual.rate = 1;
     falaAtual.pitch = 1;
+    falaAtual.volume = 1;
 
     falaAtual.onend = () => {
       indexParagrafo++;
-      lerParagrafo(); // lê o próximo parágrafo
+      lerParagrafo();
     };
 
     synth.speak(falaAtual);
   }
 
+  // Botão ler
   if (ler) {
     ler.addEventListener("click", () => {
       if (falando) {
-        // se já está lendo, reinicia
         synth.cancel();
       }
-
-      // Seleciona apenas conteúdo principal
-      const main = document.querySelector("main");
-      if (!main) return;
-
-      // Remove elementos indesejados
-      const elementosIgnorados = main.querySelectorAll("button, a, input, nav, footer");
-      elementosIgnorados.forEach(el => el.remove());
-
-      // Seleciona todos os parágrafos
-      parrafos = Array.from(main.querySelectorAll("p")).filter(p => p.innerText.trim() !== "");
-      if (parrafos.length === 0) return;
-
       indexParagrafo = 0;
       falando = true;
       lerParagrafo();
     });
   }
+
+  // Botão parar
+  if (parar) {
+    parar.addEventListener("click", () => {
+      if (falando) {
+        synth.cancel();
+        falando = false;
+        indexParagrafo = 0;
+        resetarDestaque();
+      }
+    });
+  }
+
+});
 
   if (parar) {
     parar.addEventListener("click", () => {
