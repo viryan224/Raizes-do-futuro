@@ -1357,24 +1357,24 @@ body.dark .menu-acessibilidade{
   background:#1a221d;
 }
 
-/* ===== TÍTULOS MAIS CLAROS NO DARK MODE ===== */
+/* ===== TÍTULOS DARK MODE ===== */
 
-body.dark .titulo{
-  color:#b7e4c7 !important;
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark .titulo,
+body.dark .logo{
+  color: #d8f3dc !important;
 }
 
 body.dark .card h3{
-  color:#b7e4c7 !important;
+  color: #d8f3dc !important;
 }
 
 body.dark .texto-comparacao h3{
-  color:#b7e4c7 !important;
-}
-
-body.dark .logo{
-  color:#d8f3dc !important;
+  color: #d8f3dc !important;
 }
 
 body.dark .saiba-extra h3{
-  color:#b7e4c7 !important;
+  color: #d8f3dc !important;
 }
