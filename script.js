@@ -424,3 +424,14 @@ let parrafos = Array.from(document.querySelectorAll("p"))
   }
 
 });
+const btnAcessibilidade =
+document.getElementById("btnAcessibilidade");
+
+const menuAcessibilidade =
+document.getElementById("menuAcessibilidade");
+
+btnAcessibilidade.addEventListener("click", () => {
+
+  menuAcessibilidade.classList.toggle("ativo");
+
+});
