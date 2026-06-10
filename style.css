@@ -1379,3 +1379,18 @@ body.dark .texto-comparacao h3{
 body.dark .saiba-extra h3{
   color: #d8f3dc !important;
 }
+
+/* CENTRALIZAÇÃO DOS CARDS */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
+  justify-content:center;
+}
+
+.cards .card:last-child:nth-child(odd){
+  grid-column:1 / -1;
+  max-width:500px;
+  margin:auto;
+}
