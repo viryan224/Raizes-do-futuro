@@ -1359,8 +1359,22 @@ body.dark .menu-acessibilidade{
 
 /* ===== TÍTULOS MAIS CLAROS NO DARK MODE ===== */
 
-body.dark .titulo,
-body.dark .card h3,
+body.dark .titulo{
+  color:#b7e4c7 !important;
+}
+
+body.dark .card h3{
+  color:#b7e4c7 !important;
+}
+
 body.dark .texto-comparacao h3{
-  text-shadow: 0 0 10px rgba(216,243,220,0.15);
+  color:#b7e4c7 !important;
+}
+
+body.dark .logo{
+  color:#d8f3dc !important;
+}
+
+body.dark .saiba-extra h3{
+  color:#b7e4c7 !important;
 }
