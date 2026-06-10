@@ -1384,16 +1384,15 @@ body.dark .saiba-extra h3{
 
 .cards{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(300px,350px));
   gap:25px;
   justify-content:center;
 }
 
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,320px));
-  justify-content:center;
-  gap:25px;
+.cards .card:last-child:nth-child(odd){
+  grid-column:auto;
+  max-width:none;
+  margin:0;
 }
 
 /* DICAS */
