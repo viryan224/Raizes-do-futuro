@@ -1356,3 +1356,11 @@ select{
 body.dark .menu-acessibilidade{
   background:#1a221d;
 }
+
+/* ===== TÍTULOS MAIS CLAROS NO DARK MODE ===== */
+
+body.dark .titulo,
+body.dark .card h3,
+body.dark .texto-comparacao h3{
+  text-shadow: 0 0 10px rgba(216,243,220,0.15);
+}
