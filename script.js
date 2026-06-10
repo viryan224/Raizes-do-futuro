@@ -4,12 +4,17 @@ const tema = document.getElementById("toggleTema");
 const body = document.body;
 
 /* BOAS VINDAS */
+// Seleciona os elementos do DOM
+const nomeUsuario = document.getElementById("nomeUsuario");
+const boasVindas = document.getElementById("boasVindas");
+
+// Adiciona o evento de input
 nomeUsuario.addEventListener("input", () => {
   const nome = nomeUsuario.value.trim();
 
-  if(nome !== ""){
+  if (nome !== "") {
     boasVindas.innerText = `Olá, ${nome}! Vamos construir um futuro sustentável 🌱`;
-  }else{
+  } else {
     boasVindas.innerText = "";
   }
 });
