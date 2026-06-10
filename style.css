@@ -1227,24 +1227,6 @@ select{
 /* BOTÕES DE LEITURA */
 /* ========================= */
 
-.leitura-botoes {
-  margin-bottom: 20px;
-  display:flex;
-  gap:10px;
-  justify-content:center;
-}
-
-#lerPagina,
-#pararLeitura {
-  padding: 10px 15px;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  color: white;
-  transition: 0.3s;
-}
-
 #lerPagina {
   background: #2e7d32;
 }
@@ -1267,4 +1249,47 @@ select{
   background:rgba(255,255,0,0.35);
   border-radius:8px;
   padding:4px;
+}
+
+/* ========================= */
+/* AJUSTE FINAL ACESSIBILIDADE */
+/* ========================= */
+
+.acessibilidade{
+  position:fixed;
+  right:20px;
+  bottom:90px; /* fica acima do botão topo */
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+
+  z-index:999;
+}
+
+.acessibilidade button{
+  width:55px;
+  height:55px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin:0;
+  padding:0;
+
+  border:none;
+  border-radius:50%;
+
+  font-size:1.1rem;
+  cursor:pointer;
+}
+
+#btnTopo{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+
+  z-index:998;
 }
