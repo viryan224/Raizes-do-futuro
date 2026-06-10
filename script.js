@@ -358,17 +358,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const ler = document.getElementById("lerPagina");
   const parar = document.getElementById("pararLeitura");
-  const main = document.getElementById("conteudoPrincipal");
-
-  if (!main) return;
-
   const synth = window.speechSynthesis;
 
   let falando = false;
   let indexParagrafo = 0;
 
-  let parrafos = Array.from(main.querySelectorAll("p"))
-    .filter(p => p.innerText.trim() !== "");
+let parrafos = Array.from(document.querySelectorAll("p"))
+.filter(p => p.innerText.trim() !== "");
 
   let falaAtual = null;
 
@@ -393,7 +389,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     falaAtual = new SpeechSynthesisUtterance(p.innerText);
     falaAtual.lang = "pt-BR";
-    falaAtual.rate = 1;
+    falaAtual.rate = 0.9;
     falaAtual.pitch = 1;
     falaAtual.volume = 1;
 
