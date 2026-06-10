@@ -362,18 +362,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!main) return;
 
-  let synth = window.speechSynthesis;
+  const synth = window.speechSynthesis;
+
   let falando = false;
   let indexParagrafo = 0;
-  let parrafos = Array.from(main.querySelectorAll("p")).filter(p => p.innerText.trim() !== "");
+
+  let parrafos = Array.from(main.querySelectorAll("p"))
+    .filter(p => p.innerText.trim() !== "");
+
   let falaAtual = null;
 
-  // Função para limpar destaque
+  // Remove destaque
   function resetarDestaque() {
     parrafos.forEach(p => p.classList.remove("destaque"));
   }
 
-  // Lê o parágrafo atual
+  // Lê parágrafos um por um
   function lerParagrafo() {
     if (indexParagrafo >= parrafos.length) {
       falando = false;
@@ -383,6 +387,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const p = parrafos[indexParagrafo];
+
     resetarDestaque();
     p.classList.add("destaque");
 
@@ -400,40 +405,25 @@ document.addEventListener("DOMContentLoaded", () => {
     synth.speak(falaAtual);
   }
 
-  // Botão ler
+  // Botão LER
   if (ler) {
     ler.addEventListener("click", () => {
-      if (falando) {
-        synth.cancel();
-      }
+      synth.cancel();
+
       indexParagrafo = 0;
       falando = true;
+
       lerParagrafo();
     });
   }
 
-  // Botão parar
+  // Botão PARAR
   if (parar) {
     parar.addEventListener("click", () => {
-      if (falando) {
-        synth.cancel();
-        falando = false;
-        indexParagrafo = 0;
-        resetarDestaque();
-      }
-    });
-  }
-
-});
-
-  if (parar) {
-    parar.addEventListener("click", () => {
-      if (falando) {
-        synth.cancel();
-        falando = false;
-        indexParagrafo = 0;
-        resetarDestaque();
-      }
+      synth.cancel();
+      falando = false;
+      indexParagrafo = 0;
+      resetarDestaque();
     });
   }
 
