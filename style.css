@@ -1309,3 +1309,50 @@ select{
   }
 
 }
+
+/* AÇÕES DO TOPO */
+
+.acoes-topo{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+/* MENU ACESSIBILIDADE */
+
+.menu-acessibilidade{
+  position:fixed;
+
+  top:80px;
+  right:20px;
+
+  width:220px;
+
+  background:var(--branco);
+
+  border-radius:15px;
+
+  padding:15px;
+
+  box-shadow:var(--sombra);
+
+  display:none;
+
+  flex-direction:column;
+
+  gap:10px;
+
+  z-index:1000;
+}
+
+.menu-acessibilidade.ativo{
+  display:flex;
+}
+
+.menu-acessibilidade button{
+  width:100%;
+}
+
+body.dark .menu-acessibilidade{
+  background:#1a221d;
+}
