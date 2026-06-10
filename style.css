@@ -1293,3 +1293,30 @@ select{
 
   z-index:998;
 }
+
+/* ========================= */
+/* ACESSIBILIDADE MOBILE */
+/* ========================= */
+
+@media (max-width: 768px){
+
+  .acessibilidade{
+    right:10px;
+    bottom:75px; /* acima do botão topo */
+    gap:6px;
+  }
+
+  .acessibilidade button{
+    width:42px;
+    height:42px;
+    font-size:0.9rem;
+  }
+
+  #btnTopo{
+    width:40px;
+    height:40px;
+    right:10px;
+    bottom:15px;
+  }
+
+}
