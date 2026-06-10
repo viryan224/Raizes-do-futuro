@@ -1127,6 +1127,10 @@ body.dark #contato .formulario{
 /* ACESSIBILIDADE */
 
 
+/* ========================= */
+/* ACESSIBILIDADE FLUTUANTE */
+/* ========================= */
+
 .acessibilidade{
   position:fixed;
   right:15px;
@@ -1163,13 +1167,23 @@ body.dark #contato .formulario{
   transform:scale(1.08);
   background:#40916c;
 }
+
+/* ========================= */
+/* TIPOGRAFIA GLOBAL */
+/* ========================= */
+
 button,
 a,
 input,
 textarea,
 select{
-  font-size: inherit;
+  font-family: inherit;
 }
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
 .hero-box{
   display:flex;
   flex-direction:column;
@@ -1178,13 +1192,19 @@ select{
 }
 
 .hero-box h1{
-  display:block;
   width:100%;
-  text-align:center;
   margin:0 auto 20px auto;
 }
+
+/* ========================= */
+/* BOTÕES DE LEITURA */
+/* ========================= */
+
 .leitura-botoes {
   margin-bottom: 20px;
+  display:flex;
+  gap:10px;
+  justify-content:center;
 }
 
 #lerPagina,
@@ -1194,8 +1214,8 @@ select{
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  margin-right: 10px;
   color: white;
+  transition: 0.3s;
 }
 
 #lerPagina {
@@ -1208,11 +1228,15 @@ select{
 
 #lerPagina:hover,
 #pararLeitura:hover {
-  opacity: 0.9;
+  opacity: 0.85;
+  transform: translateY(-2px);
 }
 
-/* Destaque do parágrafo sendo lido */
+/* ========================= */
+/* DESTAQUE LEITURA */
+/* ========================= */
+
 main p.destaque {
   background: rgba(255, 255, 0, 0.3);
-  transition: background 0.3s;
+  transition: background 0.3s ease;
 }
