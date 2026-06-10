@@ -1183,3 +1183,36 @@ select{
   text-align:center;
   margin:0 auto 20px auto;
 }
+.leitura-botoes {
+  margin-bottom: 20px;
+}
+
+#lerPagina,
+#pararLeitura {
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-right: 10px;
+  color: white;
+}
+
+#lerPagina {
+  background: #2e7d32;
+}
+
+#pararLeitura {
+  background: #c62828;
+}
+
+#lerPagina:hover,
+#pararLeitura:hover {
+  opacity: 0.9;
+}
+
+/* Destaque do parágrafo sendo lido */
+main p.destaque {
+  background: rgba(255, 255, 0, 0.3);
+  transition: background 0.3s;
+}
