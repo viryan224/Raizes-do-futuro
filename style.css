@@ -1138,8 +1138,8 @@ body.dark #contato .formulario{
 
 .acessibilidade{
   position:fixed;
-  right:15px;
-  bottom:15px;
+  right:20px;
+  bottom:90px; 
 
   display:flex;
   flex-direction:column;
@@ -1151,6 +1151,10 @@ body.dark #contato .formulario{
 .acessibilidade button{
   width:55px;
   height:55px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
   border:none;
   border-radius:50%;
@@ -1166,6 +1170,19 @@ body.dark #contato .formulario{
   box-shadow:0 4px 12px rgba(0,0,0,0.2);
 
   transition:0.3s;
+
+  padding:0;
+  line-height:1;
+}
+
+#lerPagina,
+#pararLeitura,
+#aumentarFonte,
+#diminuirFonte{
+  font-size:1.2rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .acessibilidade button:hover{
