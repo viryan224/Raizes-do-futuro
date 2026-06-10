@@ -435,3 +435,16 @@ btnAcessibilidade.addEventListener("click", () => {
   menuAcessibilidade.classList.toggle("ativo");
 
 });
+
+/* FECHAR MENU AO CLICAR FORA */
+
+document.addEventListener("click", (e) => {
+
+  if (
+    !menuAcessibilidade.contains(e.target) &&
+    !btnAcessibilidade.contains(e.target)
+  ) {
+    menuAcessibilidade.classList.remove("ativo");
+  }
+
+});
