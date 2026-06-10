@@ -168,15 +168,10 @@ body.dark .header{
 
 /* CARDS */
 .cards{
-  display:flex;
-  flex-wrap:wrap;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,350px));
   justify-content:center;
   gap:25px;
-}
-
-.card{
-  flex:0 1 320px;
-  max-width:350px;
 }
 
 .card{
