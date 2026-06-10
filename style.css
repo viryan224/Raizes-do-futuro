@@ -1240,7 +1240,8 @@ select{
 /* DESTAQUE LEITURA */
 /* ========================= */
 
-main p.destaque {
-  background: rgba(255, 255, 0, 0.3);
-  transition: background 0.3s ease;
+.destaque{
+  background:rgba(255,255,0,0.35);
+  border-radius:8px;
+  padding:4px;
 }
