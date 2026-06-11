@@ -28,6 +28,7 @@ TECNOLOGIAS UTILIZADAS
 - JavaScript
 
 IMAGENS
+
 As imagens do projeto consistem em registros fotográficos do próprio autor nas propriedades locais.
 
 AUTOR
