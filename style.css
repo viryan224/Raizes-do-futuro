@@ -1435,3 +1435,10 @@ body.dark .saiba-extra{
 #educacao .card{
   width:350px;
 }
+#importancia-agro{
+  background: linear-gradient(
+    180deg,
+    rgba(82,183,136,0.08),
+    transparent
+  );
+}
