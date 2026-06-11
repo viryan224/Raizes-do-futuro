@@ -1,21 +1,19 @@
 🌾 AgroForte – Futuro Sustentável
 
-Sobre o Projeto
 
+SOBRE O PROJETO
 O AgroForte – Futuro Sustentável foi desenvolvido para o Concurso Agrinho 2026 com o objetivo de conscientizar a população sobre a importância da agricultura sustentável para o desenvolvimento econômico, social e ambiental do Brasil.
 
 O site apresenta conteúdos educativos, comparações entre práticas agrícolas convencionais e sustentáveis, uma calculadora interativa de impacto ambiental, dicas para produtores rurais e materiais complementares para aprofundamento do tema.
 
-Objetivos
-
+OBJETIVOS
 - Promover a educação ambiental.
 - Demonstrar a importância do agronegócio para o Brasil.
 - Incentivar práticas agrícolas sustentáveis.
 - Apresentar tecnologias que contribuem para a preservação dos recursos naturais.
 - Estimular a reflexão sobre a produção de alimentos e a conservação do meio ambiente.
 
-Funcionalidades
-
+FUNCIONALIDADES
 - 🌱 Conteúdo educativo sobre sustentabilidade no campo.
 - 📊 Calculadora de impacto ambiental.
 - 🌾 Comparação entre modelos agrícolas convencionais e sustentáveis.
@@ -24,26 +22,21 @@ Funcionalidades
 - ♿ Recursos de acessibilidade.
 - 📱 Layout responsivo para dispositivos móveis.
 
-Tecnologias Utilizadas
-
+TECNOLOGIAS UTILIZADAS
 - HTML5
 - CSS3
 - JavaScript
 
-Imagens
+IMAGENS
+As imagens do projeto consistem em registros fotográficos do próprio autor nas propriedades locais.
 
-As imagens utilizadas no projeto foram tiradas pelo próprio autor das propriedades localizadas na região.
-
-
-Autor
-
+AUTOR
 Ryan Emanuel Vieira Martins
 
-Concurso
-
+CONCURSO
 Projeto desenvolvido para participação no Concurso Agrinho 2026.
 
-Referências:
+REFERÊNCIAS:
 
 EHLERS, Eduardo Mazzaferro. O que se entende por agricultura sustentável?. 1994. Tese de Doutorado. Universidade de São Paulo. Disponível em: <https://teses.usp.br/teses/disponiveis/90/90131/tde-25112011-091132/publico/eduadomazzaferroehlers.pdf>.
 
@@ -53,6 +46,5 @@ ALENCAR, Vladimir Costa de et al. Análises multiobjetivo, baseada em programaç
 
 RONQUIM, Daniel S. Corrêa et al. TECNOLOGIA E INOVAÇÃO NO AGRO2. Disponível em:<https://www.researchgate.net/profile/Silvio-Crestana/publication/385384451_TECNOLOGIA_E_INOVACAO_NO_AGRO/links/67228d0077b63d1220cdb513/TECNOLOGIA-E-INOVACAO-NO-AGRO.pdf>.
 
-Observação
-
+OBSERVAÇÃO
 Este projeto possui finalidade exclusivamente educativa e busca contribuir para a conscientização sobre a importância da sustentabilidade na agricultura e da preservação dos recursos naturais para as futuras gerações.
