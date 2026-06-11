@@ -14,13 +14,11 @@ nomeUsuario.addEventListener("input", () => {
   }
 });
 
-/* IR PARA EDUCAÇÃO */
 function irEducacao(){
-  document.getElementById("educacao").scrollIntoView({
+  document.getElementById("importancia-agro").scrollIntoView({
     behavior:"smooth"
   });
 }
-
 /* TEMA */
 tema.addEventListener("click", () => {
   body.classList.toggle("dark");
