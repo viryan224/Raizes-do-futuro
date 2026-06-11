@@ -302,7 +302,7 @@ body.dark .header{
   z-index:998;
 }
 
-/* ===== DARK MODE COMPLETO- MODO ESCURO ===== */
+/*  DARK MODE COMPLETO- MODO ESCURO  */
 body.dark{
   background:#101512;
   color:#f1f1f1;
@@ -461,7 +461,7 @@ body.dark #contato input::placeholder,
 body.dark #contato textarea::placeholder {
   color: #aaa;
 }
-/* ===== CORREÇÃO SIMPLES ===== */
+/*  CORREÇÃO SIMPLES  */
 
 /* Antes e Depois */
 .comparacao{
@@ -579,7 +579,7 @@ body.dark #contato textarea::placeholder {
   }
 
   }
-/* ===== PACK PREMIUM DOS CARDS ===== */
+/*  PACK PREMIUM DOS CARDS  */
 
 .card{
   position:relative;
@@ -660,7 +660,7 @@ body.dark .card h3{
 body.dark .card p{
   color:#e0e0e0;
 }
-/* ===== HERO PREMIUM ===== */
+/*  HERO PREMIUM  */
 
 .hero{
   position:relative;
@@ -755,7 +755,7 @@ color:#1e1e1e;
   }
 
   }
-/* ===== SEÇÕES PREMIUM ===== */
+/*  SEÇÕES PREMIUM  */
 
 .section{
   position:relative;
@@ -842,7 +842,7 @@ color:#1e1e1e;
   }
 
   }
-/* ===== BOTÕES PREMIUM ===== */
+/*  BOTÕES PREMIUM  */
 
 .btn{
   position:relative;
@@ -1035,7 +1035,7 @@ body.dark::-webkit-scrollbar-thumb{
   background:#2d6a4f;
   border-radius:20px;
 }
-/* ===== FOTO EDUCAÇÃO ===== */
+/*  FOTO EDUCAÇÃO  */
 
 .imagem-educacao{
   margin:40px 0;
@@ -1096,7 +1096,7 @@ body.dark .imagem-dicas img{
   padding:10px 16px;
   font-size:0.95rem;
 }
-/* ===== CORREÇÃO FINAL DARK MODE CONTATO ===== */
+/*  CORREÇÃO FINAL DARK MODE CONTATO  */
 
 body.dark #contato .formulario{
   background:#1b1f1c !important;
@@ -1125,7 +1125,7 @@ body.dark #contato textarea:focus{
     0 0 0 3px rgba(82,183,136,0.2);
 }
 
-/* ===== FUNDO DO FORMULÁRIO NO DARK MODE ===== */
+/*  FUNDO DO FORMULÁRIO NO DARK MODE  */
 
 body.dark #contato .formulario{
   background:#202522 !important;
@@ -1196,9 +1196,9 @@ body.dark #contato .formulario{
   background:#40916c;
 }
 
-/* ========================= */
+/*  */
 /* TIPOGRAFIA GLOBAL */
-/* ========================= */
+/*  */
 
 button,
 a,
@@ -1208,9 +1208,9 @@ select{
   font-family: inherit;
 }
 
-/* ========================= */
+/* */
 /* HERO */
-/* ========================= */
+/* */
 
 .hero-box{
   display:flex;
@@ -1224,9 +1224,9 @@ select{
   margin:0 auto 20px auto;
 }
 
-/* ========================= */
+/*  */
 /* BOTÕES DE LEITURA */
-/* ========================= */
+/* */
 
 #lerPagina {
   background: #2e7d32;
@@ -1242,9 +1242,9 @@ select{
   transform: translateY(-2px);
 }
 
-/* ========================= */
+/*  */
 /* DESTAQUE LEITURA */
-/* ========================= */
+/*  */
 
 .destaque{
   background:rgba(255,255,0,0.35);
@@ -1252,9 +1252,9 @@ select{
   padding:4px;
 }
 
-/* ========================= */
+/*  */
 /* AJUSTE FINAL ACESSIBILIDADE */
-/* ========================= */
+/*  */
 
 .acessibilidade{
   position:fixed;
@@ -1295,9 +1295,9 @@ select{
   z-index:998;
 }
 
-/* ========================= */
+/*  */
 /* ACESSIBILIDADE MOBILE */
-/* ========================= */
+/*  */
 
 @media (max-width: 768px){
 
@@ -1358,7 +1358,7 @@ body.dark .menu-acessibilidade{
   background:#1a221d;
 }
 
-/* ===== TÍTULOS DARK MODE ===== */
+/*  TÍTULOS DARK MODE  */
 
 body.dark h1,
 body.dark h2,
