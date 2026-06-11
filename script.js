@@ -310,9 +310,9 @@ document.getElementById("formContato").addEventListener("submit", function(e){
 
   this.reset();
 });
-/* ========================= */
+/* */
 /* ACESSIBILIDADE */
-/* ========================= */
+/* */
 
 let tamanhoFonte = 100;
 
