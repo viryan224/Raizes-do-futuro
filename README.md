@@ -32,9 +32,8 @@ Tecnologias Utilizadas
 
 Imagens
 
-Parte das imagens utilizadas no projeto foram produzidas pelo próprio autor durante visitas e registros relacionados ao meio rural.
+Aas imagens utilizadas no projeto foram tiradas pelo próprio autor das propriedades localizadas na região.
 
-Outras imagens foram utilizadas exclusivamente para fins educacionais e ilustrativos, respeitando os princípios de uso acadêmico do projeto.
 
 Autor
 
