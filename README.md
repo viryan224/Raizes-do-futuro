@@ -1,69 +1,115 @@
-🌾 AgroForte – Futuro Sustentável
+# 🌾 Raízes do Futuro
 
+## Agro Forte, Futuro Sustentável
 
-SOBRE O PROJETO
+### 📖 Sobre o Projeto
 
-O AgroForte – Futuro Sustentável foi desenvolvido para o Concurso Agrinho 2026 com o objetivo de conscientizar a população sobre a importância da agricultura sustentável para o desenvolvimento econômico, social e ambiental do Brasil.
+O **Raízes do Futuro** foi desenvolvido para o **Concurso Agrinho 2026** com o objetivo de conscientizar a população sobre a importância da agricultura sustentável para o desenvolvimento econômico, social e ambiental do Brasil.
 
-O site apresenta conteúdos educativos, comparações entre práticas agrícolas convencionais e sustentáveis, uma calculadora interativa de impacto ambiental, dicas para produtores rurais e materiais complementares para aprofundamento do tema.
+O projeto apresenta informações sobre a relevância do agronegócio para a economia brasileira, os desafios ambientais enfrentados pela agricultura moderna e as soluções sustentáveis que podem garantir produtividade e preservação dos recursos naturais para as futuras gerações.
 
+Por meio de conteúdos educativos, recursos interativos e materiais complementares, o site busca promover o conhecimento sobre práticas agrícolas responsáveis e incentivar uma visão mais sustentável para o futuro do campo.
 
+---
 
-OBJETIVOS
-- Promover a educação ambiental.
-- Demonstrar a importância do agronegócio para o Brasil.
-- Incentivar práticas agrícolas sustentáveis.
-- Apresentar tecnologias que contribuem para a preservação dos recursos naturais.
-- Estimular a reflexão sobre a produção de alimentos e a conservação do meio ambiente.
+## 🎯 Objetivos
 
+* Promover a educação ambiental e a conscientização sobre sustentabilidade.
+* Demonstrar a importância econômica e social do agronegócio para o Brasil.
+* Incentivar a adoção de práticas agrícolas sustentáveis.
+* Apresentar tecnologias que contribuem para a preservação dos recursos naturais.
+* Estimular a reflexão sobre produção de alimentos, conservação ambiental e desenvolvimento sustentável.
+* Mostrar como é possível conciliar produtividade agrícola e responsabilidade ambiental.
 
+---
 
-FUNCIONALIDADES
-- 🌱 Conteúdo educativo sobre sustentabilidade no campo.
-- 📊 Calculadora de impacto ambiental.
-- 🌾 Comparação entre modelos agrícolas convencionais e sustentáveis.
-- 📚 Links para artigos e vídeos educativos.
-- 🌙 Modo escuro.
-- ♿ Recursos de acessibilidade.
-- 📱 Layout responsivo para dispositivos móveis.
+## 🌱 Conteúdo do Projeto
 
+O site está organizado em seções educativas que apresentam:
 
+### 🌾 A Importância do Agro para o Brasil
 
-TECNOLOGIAS UTILIZADAS
-- HTML5
-- CSS3
-- JavaScript
+Aborda a relevância do agronegócio para a economia nacional, geração de empregos, produção de alimentos e desenvolvimento do país.
 
+### 🌱 A Necessidade de um Agro Sustentável
 
+Explica os desafios ambientais da agricultura moderna e apresenta alternativas sustentáveis para garantir a produção agrícola no futuro.
 
-IMAGENS
+### 📚 Pilares da Sustentabilidade
 
-As imagens do projeto consistem em registros fotográficos do próprio autor nas propriedades locais.
+Apresenta conceitos fundamentais relacionados à agricultura sustentável, conservação do solo, uso consciente da água, fertilização responsável e tecnologia no campo.
 
+### 🌾 Transformação no Campo
 
+Comparação entre práticas agrícolas convencionais e sustentáveis, demonstrando seus impactos na produtividade e no meio ambiente.
 
-AUTOR
+### 📊 Calculadora de Impacto Ambiental
 
-Ryan Emanuel Vieira Martins
+Ferramenta interativa que permite ao usuário avaliar práticas agrícolas com base no uso da água e fertilizantes, gerando um diagnóstico sustentável.
 
-CONCURSO
+### 💡 Dicas para um Agro Mais Forte
 
-Projeto desenvolvido para participação no Concurso Agrinho 2026.
+Conjunto de recomendações voltadas para produtores rurais interessados em aumentar a produtividade com menor impacto ambiental.
 
+---
 
+## 🚀 Funcionalidades
 
-REFERÊNCIAS:
+* 🌱 Conteúdo educativo sobre sustentabilidade no campo.
+* 🌾 Seção sobre a importância econômica do agronegócio.
+* 📊 Calculadora de impacto ambiental interativa.
+* 🔄 Comparação entre agricultura convencional e sustentável.
+* 📚 Materiais complementares com artigos e vídeos.
+* 🌙 Modo escuro.
+* ♿ Recursos de acessibilidade.
+* 🔊 Leitura automática dos conteúdos da página.
+* 📱 Layout responsivo para computadores, tablets e celulares.
 
-EHLERS, Eduardo Mazzaferro. O que se entende por agricultura sustentável?. 1994. Tese de Doutorado. Universidade de São Paulo. Disponível em: <https://teses.usp.br/teses/disponiveis/90/90131/tde-25112011-091132/publico/eduadomazzaferroehlers.pdf>.
+---
 
-CAPORAL, Francisco Roberto. Em defesa de um Plano Nacional de Transição Agroecológica: compromisso com as atuais e nosso legado para as futuras gerações. Agroecologia e os desafios da Transição Agroecológica, v. 2, p. 261-302, 2009. Disponível em:<https://d1wqtxts1xzle7.cloudfront.net/84141318/Livro_Agroecologia-libre.pdf?1649947258=&response-content-disposition=inline%3B+filename%3DAgroecologia_e_os_desafios_da_transicao.pdf&Expires=1779106472&Signature=ZpIDhU8QK45pU8Lc4ZSIeBkLKScax2a8IihHdecI1Kgikb4jLfBIpe0mrUCiZswHq58HCGhKbGJUiJ7RRQ9oKm8bFaS9edXMX92NlQnc~oF8Ejv7Hd4-Jvc6HcqUh6d3lnJF8GBFL11gqGGsSEKfF1I6e6iZwX3DZd1d0xx-3rBv1RMAY7RN1lh14BbeXPhoyBMMc96EGrZgFXg71hZBDhF7T4PJGILvHHBdFaIs6XJwkntAwOY10TgozuV-yePNhJiQ08GSsxz3hpJWVhpLh0FKoQirCq7SOsLC8U2Dn~ExUy0FuDhG6xQlSaLfcNvatr-CRDXUkzN9k89-VO1K9Q__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA#page=272>.
+## 💻 Tecnologias Utilizadas
 
-ALENCAR, Vladimir Costa de et al. Análises multiobjetivo, baseada em programação linear, e comparativas para agriculturas de manejo convencional e orgânico. 2009. Disponível em:<https://dspace.sti.ufcg.edu.br/bitstream/riufcg/1670/3/VLADIMIR%20COSTA%20DE%20ALENCAR%20-%20TESE%20PPGRN%202009.pdf>.
+* HTML5
+* CSS3
+* JavaScript
 
-RONQUIM, Daniel S. Corrêa et al. TECNOLOGIA E INOVAÇÃO NO AGRO2. Disponível em:<https://www.researchgate.net/profile/Silvio-Crestana/publication/385384451_TECNOLOGIA_E_INOVACAO_NO_AGRO/links/67228d0077b63d1220cdb513/TECNOLOGIA-E-INOVACAO-NO-AGRO.pdf>.
+---
 
+## 📸 Imagens
 
+As imagens utilizadas no projeto consistem em registros fotográficos produzidos pelo próprio autor em propriedades rurais locais, valorizando a realidade agrícola da região.
 
-OBSERVAÇÃO
+---
 
-Este projeto possui finalidade exclusivamente educativa e busca contribuir para a conscientização sobre a importância da sustentabilidade na agricultura e da preservação dos recursos naturais para as futuras gerações.
+## 👨‍💻 Autor
+
+**Ryan Emanuel Vieira Martins**
+
+Colégio Estadual do Campo de São Manoel
+
+Projeto desenvolvido para participação no **Concurso Agrinho 2026**.
+
+---
+
+## 📚 Referências
+
+EHLERS, Eduardo Mazzaferro. *O que se entende por agricultura sustentável?* 1994. Tese (Doutorado) – Universidade de São Paulo.
+
+CAPORAL, Francisco Roberto. *Em defesa de um Plano Nacional de Transição Agroecológica: compromisso com as atuais e nosso legado para as futuras gerações*. In: Agroecologia e os desafios da Transição Agroecológica. 2009.
+
+ALENCAR, Vladimir Costa de et al. *Análises multiobjetivo, baseada em programação linear, e comparativas para agriculturas de manejo convencional e orgânico*. 2009.
+
+RONQUIM, Daniel S. Corrêa et al. *Tecnologia e Inovação no Agro*. 2018.
+
+EMBRAPA. *Visão 2030: o Futuro da Agricultura Brasileira*. Brasília: Embrapa, 2018.
+
+CEPEA/ESALQ-USP. *PIB do Agronegócio Brasileiro*. Centro de Estudos Avançados em Economia Aplicada.
+
+---
+
+## 📝 Observação
+
+Este projeto possui finalidade exclusivamente educativa e foi desenvolvido para o Concurso Agrinho 2026. Seu objetivo é contribuir para a conscientização sobre a importância da sustentabilidade na agricultura, da preservação dos recursos naturais e do papel fundamental do agronegócio no desenvolvimento do Brasil.
+
+Produzir hoje, preservando o amanhã. 🌱
+
