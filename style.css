@@ -1425,3 +1425,13 @@ body.dark .saiba-extra{
   max-width:700px;
   margin:0 auto 20px;
 }
+#educacao .cards{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:25px;
+}
+
+#educacao .card{
+  width:350px;
+}
