@@ -8,12 +8,14 @@ O AgroForte – Futuro Sustentável foi desenvolvido para o Concurso Agrinho 202
 O site apresenta conteúdos educativos, comparações entre práticas agrícolas convencionais e sustentáveis, uma calculadora interativa de impacto ambiental, dicas para produtores rurais e materiais complementares para aprofundamento do tema.
 
 
+
 OBJETIVOS
 - Promover a educação ambiental.
 - Demonstrar a importância do agronegócio para o Brasil.
 - Incentivar práticas agrícolas sustentáveis.
 - Apresentar tecnologias que contribuem para a preservação dos recursos naturais.
 - Estimular a reflexão sobre a produção de alimentos e a conservação do meio ambiente.
+
 
 
 FUNCIONALIDADES
@@ -26,21 +28,28 @@ FUNCIONALIDADES
 - 📱 Layout responsivo para dispositivos móveis.
 
 
+
 TECNOLOGIAS UTILIZADAS
 - HTML5
 - CSS3
 - JavaScript
 
 
+
 IMAGENS
+
 As imagens do projeto consistem em registros fotográficos do próprio autor nas propriedades locais.
 
 
+
 AUTOR
+
 Ryan Emanuel Vieira Martins
 
 CONCURSO
+
 Projeto desenvolvido para participação no Concurso Agrinho 2026.
+
 
 
 REFERÊNCIAS:
@@ -52,6 +61,7 @@ CAPORAL, Francisco Roberto. Em defesa de um Plano Nacional de Transição Agroec
 ALENCAR, Vladimir Costa de et al. Análises multiobjetivo, baseada em programação linear, e comparativas para agriculturas de manejo convencional e orgânico. 2009. Disponível em:<https://dspace.sti.ufcg.edu.br/bitstream/riufcg/1670/3/VLADIMIR%20COSTA%20DE%20ALENCAR%20-%20TESE%20PPGRN%202009.pdf>.
 
 RONQUIM, Daniel S. Corrêa et al. TECNOLOGIA E INOVAÇÃO NO AGRO2. Disponível em:<https://www.researchgate.net/profile/Silvio-Crestana/publication/385384451_TECNOLOGIA_E_INOVACAO_NO_AGRO/links/67228d0077b63d1220cdb513/TECNOLOGIA-E-INOVACAO-NO-AGRO.pdf>.
+
 
 
 OBSERVAÇÃO
