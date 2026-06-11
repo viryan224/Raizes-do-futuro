@@ -32,7 +32,7 @@ Tecnologias Utilizadas
 
 Imagens
 
-Aas imagens utilizadas no projeto foram tiradas pelo próprio autor das propriedades localizadas na região.
+As imagens utilizadas no projeto foram tiradas pelo próprio autor das propriedades localizadas na região.
 
 
 Autor
