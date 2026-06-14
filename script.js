@@ -51,7 +51,7 @@ function mostrarAntes(){
 
   /* LINKS */
   document.getElementById("linkArtigo").href =
-  "https://www.idam.am.gov.br/wp-content/uploads/2024/06/Cartilha-gecam.indd_compressed.pdf";
+  "https://e-revista.unioeste.br/index.php/scientiaagraria/pt_BR/article/view/7351/7390";
 
   document.getElementById("linkVideo").href =
   "https://www.tce.sp.gov.br/sala-imprensa/videos/ods-2-fome-zero-e-agricultura-sustentavel-observatorio-futuro-tcesp";
