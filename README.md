@@ -107,9 +107,5 @@ CEPEA/ESALQ-USP. *PIB do Agronegócio Brasileiro*. Centro de Estudos Avançados 
 
 ---
 
-## 📝 Observação
-
-Este projeto possui finalidade exclusivamente educativa e foi desenvolvido para o Concurso Agrinho 2026. Seu objetivo é contribuir para a conscientização sobre a importância da sustentabilidade na agricultura, da preservação dos recursos naturais e do papel fundamental do agronegócio no desenvolvimento do Brasil.
-
 Produzir hoje, preservando o amanhã. 🌱
 
