@@ -141,7 +141,7 @@ if(pontos >= 80){
   `;
 
   linkExtra = `
-    <a href="https://www.embrapa.br/" target="_blank" class="btn pequeno">
+    <a href="https://www.idam.am.gov.br/wp-content/uploads/2024/06/Cartilha-gecam.indd_compressed.pdf" target="_blank" class="btn pequeno">
       🌱 Conheça tecnologias sustentáveis
     </a>
   `;
