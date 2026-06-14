@@ -51,7 +51,7 @@ function mostrarAntes(){
 
   /* LINKS */
   document.getElementById("linkArtigo").href =
-  "https://copasul.agr.br/noticias/video-palestra-7-principios-da-agricultura-sustentavel-por-laercio-dalla-vecchia/1468";
+  "https://www.idam.am.gov.br/wp-content/uploads/2024/06/Cartilha-gecam.indd_compressed.pdf";
 
   document.getElementById("linkVideo").href =
   "https://www.tce.sp.gov.br/sala-imprensa/videos/ods-2-fome-zero-e-agricultura-sustentavel-observatorio-futuro-tcesp";
